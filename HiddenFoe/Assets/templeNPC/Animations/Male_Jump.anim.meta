@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 85b4b013cc7656f488d55225f84ca4ec
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Animations/Male_Jump.anim
+  uploadId: 729884

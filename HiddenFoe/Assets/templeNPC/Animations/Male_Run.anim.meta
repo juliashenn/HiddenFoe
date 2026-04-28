@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b49c9b13d9945e14491c1e447d9624ea
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Animations/Male_Run.anim
+  uploadId: 729884

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7b46816ad01989d4397d4d3d23655094
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Materials/M_Eyes.mat
+  uploadId: 729884

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b1fb2bcd645e9da4b883f8e2d8a2e87b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Materials/M_Jeogori_Male_BC.mat
+  uploadId: 729884

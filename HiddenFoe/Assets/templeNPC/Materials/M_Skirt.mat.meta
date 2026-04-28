@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1581ddbdba2b82e4fbf0099d136d21f7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Materials/M_Skirt.mat
+  uploadId: 729884

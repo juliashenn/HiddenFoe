@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2eec938fc0307a54dbca252dd4e65c94
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Materials/M_Hair_Side_Male.mat
+  uploadId: 729884

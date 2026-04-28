@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 301c65c40922f7540a5e099039acbc22
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Materials/M_TraditionalSocks_Male.mat
+  uploadId: 729884

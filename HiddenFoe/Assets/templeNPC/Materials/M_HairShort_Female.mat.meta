@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e97b229c5eb682346ae75d3b1de80d9d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Materials/M_HairShort_Female.mat
+  uploadId: 729884

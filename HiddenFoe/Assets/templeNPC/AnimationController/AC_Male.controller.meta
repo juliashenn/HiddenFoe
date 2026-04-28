@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9c0edd8f464ff7b4f8bf0c694eac5402
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/AnimationController/AC_Male.controller
+  uploadId: 729884

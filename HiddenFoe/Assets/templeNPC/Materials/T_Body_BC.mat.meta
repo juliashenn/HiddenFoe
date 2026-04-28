@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b2a997fb37c14e247879b258a541215e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Materials/T_Body_BC.mat
+  uploadId: 729884

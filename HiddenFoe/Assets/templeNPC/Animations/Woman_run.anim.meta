@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bdbc9dc245d30bd47a0c40d69e742948
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Animations/Woman_run.anim
+  uploadId: 729884

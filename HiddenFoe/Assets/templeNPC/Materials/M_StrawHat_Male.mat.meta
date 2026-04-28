@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b6d191c861de3654bb83f8eb66df53c8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Materials/M_StrawHat_Male.mat
+  uploadId: 729884

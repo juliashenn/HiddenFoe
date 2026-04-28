@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 860c03bd0a97a254ba136ba83520d801
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Materials/T_Beoseon_Female_BC.mat
+  uploadId: 729884

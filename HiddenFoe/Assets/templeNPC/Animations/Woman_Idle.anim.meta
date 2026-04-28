@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 55635d203b5fab245a267fc0cc000693
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Animations/Woman_Idle.anim
+  uploadId: 729884

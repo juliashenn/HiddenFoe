@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ba0b574e1a3e51f468347e7cca8ebfc8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306334
+  packageName: KCISA - koreanPeddlerCharacters
+  packageVersion: 1.0
+  assetPath: Assets/CustomPackage/Materials/M_Pants.mat
+  uploadId: 729884
