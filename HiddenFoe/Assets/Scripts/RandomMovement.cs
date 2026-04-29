@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class RandomMovement : MonoBehaviour
 {
+    [Header("Random Movement")]
     [SerializeField] private string walkAnimName;
     [SerializeField] private string idleAnimName;
     public NavMeshAgent agent;
@@ -14,7 +15,16 @@ public class RandomMovement : MonoBehaviour
     [SerializeField] private float minDist;
     public Transform centerPoint;
 
+    [Header("Suspicion")]
+    public string suspiciousAnimName;
+    public float viewRadius = 3f;
+    public float viewAngle = 90f;
+    public LayerMask targetMask;
+    public LayerMask obstructionMask;
+
     private bool walking = false;
+
+    private bool suspicious = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,28 +37,43 @@ public class RandomMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agent.hasPath) {
-            Vector3 dir = (agent.steeringTarget - transform.position).normalized;
-            dir.y = 0;
-
-            if (dir != Vector3.zero) {
-                Quaternion lookRot = Quaternion.LookRotation(dir);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRot, agent.angularSpeed * Time.deltaTime);
-            }
-
-            float angle = Vector3.Angle(transform.forward, dir);
-
-            if (angle > 60f) {
-                agent.isStopped = true;
-            } else {
-                agent.isStopped = false;
-            }
+        DetectTargets();
+        if (suspicious)
+        {
+            agent.isStopped = true;
         }
-        if (agent.remainingDistance <= agent.stoppingDistance) {
-            Vector3 point;
-            if (RandomPoint(centerPoint.position, range, minDist, out point)) {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                agent.SetDestination(point);
+        else {
+            agent.isStopped = false;
+            if (agent.hasPath)
+            {
+                Vector3 dir = (agent.steeringTarget - transform.position).normalized;
+                dir.y = 0;
+
+                if (dir != Vector3.zero)
+                {
+                    Quaternion lookRot = Quaternion.LookRotation(dir);
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRot, agent.angularSpeed * Time.deltaTime);
+                }
+
+                float angle = Vector3.Angle(transform.forward, dir);
+
+                if (angle > 60f)
+                {
+                    agent.isStopped = true;
+                }
+                else
+                {
+                    agent.isStopped = false;
+                }
+            }
+            if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                Vector3 point;
+                if (RandomPoint(centerPoint.position, range, minDist, out point))
+                {
+                    Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+                    agent.SetDestination(point);
+                }
             }
         }
 
@@ -78,5 +103,42 @@ public class RandomMovement : MonoBehaviour
         }
         result = Vector3.zero;
         return false;
+    }
+
+    void DetectTargets()
+    {
+        Collider[] targets = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
+
+        bool sawWeapon = false;
+
+        foreach (Collider target in targets)
+        {
+            Vector3 dirToTarget = (target.transform.position - transform.position).normalized;
+
+            if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
+            {
+                float distance = Vector3.Distance(transform.position, target.transform.position);
+
+                if (!Physics.Raycast(transform.position, dirToTarget, distance, obstructionMask))
+                {
+                    Weapon weapon = target.GetComponentInParent<Weapon>();
+
+                    if (weapon != null)
+                    {
+                        sawWeapon = true;
+                        ReactToWeapon(target.gameObject, weapon);
+                        break;
+                    }
+                }
+            }
+        }
+
+        suspicious = sawWeapon;
+    }
+
+    void ReactToWeapon(GameObject obj, Weapon weapon)
+    {
+        suspicious = true;
+        anim.Play(suspiciousAnimName);
     }
 }

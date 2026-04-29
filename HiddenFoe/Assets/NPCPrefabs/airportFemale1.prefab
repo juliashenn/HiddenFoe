@@ -239,6 +239,15 @@ MonoBehaviour:
   range: 40
   minDist: 10
   centerPoint: {fileID: 3196242859402563680}
+  suspiciousAnimName: idle_f_2_190f
+  viewRadius: 2.5
+  viewAngle: 135
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &2160925799047158658
 NavMeshAgent:
   m_ObjectHideFlags: 0

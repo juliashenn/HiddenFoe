@@ -774,6 +774,15 @@ MonoBehaviour:
   range: 50
   minDist: 25
   centerPoint: {fileID: 4197617520435187994}
+  suspiciousAnimName: 
+  viewRadius: 2.5
+  viewAngle: 135
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &4197617520435187994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e88ae4aa5d4c83d4e8a8fef1ce016979, type: 3}

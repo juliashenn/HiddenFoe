@@ -463,6 +463,15 @@ MonoBehaviour:
   range: 40
   minDist: 10
   centerPoint: {fileID: 5154520340875599901}
+  suspiciousAnimName: idle_phoneTalking_180f
+  viewRadius: 2.5
+  viewAngle: 135
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &962115487687988704
 NavMeshAgent:
   m_ObjectHideFlags: 0
