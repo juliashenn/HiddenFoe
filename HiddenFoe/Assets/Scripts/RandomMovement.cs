@@ -91,7 +91,6 @@ public class RandomMovement : MonoBehaviour
 
             agent.isStopped = true;
 
-            // play tick sound only if not already playing
             if (suspicionTickAudio != null && !suspicionTickAudio.isPlaying)
                 suspicionTickAudio.Play();
         }
@@ -184,7 +183,7 @@ public class RandomMovement : MonoBehaviour
 
     bool RandomPoint(Vector3 center, float range, float minDist, out Vector3 result)
     {
-        for (int i = 0; i < 10; i++) // try multiple times
+        for (int i = 0; i < 10; i++)
         {
             Vector3 randomPoint = center + Random.insideUnitSphere * range;
             randomPoint.y = center.y;
