@@ -42,6 +42,10 @@ public class NPCSpawner : MonoBehaviour
             }
 
             GameObject npc = Instantiate(npcPrefab, spawnPos, Quaternion.identity);
+
+            float scaleMultiplier = Random.Range(0.85f, 1.15f);
+            npc.transform.localScale *= scaleMultiplier;
+
             spawnedNPCs.Add(npc);
         }
 

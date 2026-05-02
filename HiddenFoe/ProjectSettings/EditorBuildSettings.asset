@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Airport.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Temple.unity
     guid: d69561ebb0f979e4abd011e9b3e07945
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/City.unity
     guid: 163ef5c1d3cfecf498ab32f87e70aad3
   m_configObjects:
