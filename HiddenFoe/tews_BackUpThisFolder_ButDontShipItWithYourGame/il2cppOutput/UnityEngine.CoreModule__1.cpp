@@ -1699,9 +1699,6 @@ struct Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3  : public Behaviour_t0197
 	int32_t ___U3CshapeU3Ek__BackingField;
 	int32_t ___m_BakedIndex;
 };
-struct LightProbeGroup_tF21BBB26BA53E8E7C6D957B5C95FA3BCCC1B8E0F  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
-{
-};
 struct LightProbeProxyVolume_t431001CA94D2BB5DB419E2A89E7D8116E4E1B658  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
 {
 };
@@ -17783,14 +17780,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LODU5BU5D_tA8DD59DF359B3A3CED4F230EDF0F584C7F
 	LODU5BU5D_tA8DD59DF359B3A3CED4F230EDF0F584C7F6A2842* icallRetVal = _il2cpp_icall_func(___0__unity_self);
 	return icallRetVal;
 }
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

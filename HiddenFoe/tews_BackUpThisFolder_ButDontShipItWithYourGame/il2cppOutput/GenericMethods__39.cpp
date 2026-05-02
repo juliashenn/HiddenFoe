@@ -23368,7 +23368,7 @@ IL_00af:
 		return;
 	}
 }
-// Method Definition Index: 136624
+// Method Definition Index: 136622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarBehaviourNGO_OnAvatarIdChanged_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mE7B123E3E51BF2B23B3F2F0393443C312962FBAC_gshared (AvatarBehaviourNGO_t24B8A1C8AD46098E71F1E9BC50386FFDBD958634* __this, int32_t ___0_prev, int32_t ___1_val, const RuntimeMethod* method) 
 {
 	{
@@ -23376,7 +23376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarBehaviourNGO_OnAvatarIdChanged_Tis
 		return;
 	}
 }
-// Method Definition Index: 136624
+// Method Definition Index: 136622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarBehaviourNGO_OnAvatarIdChanged_TisUInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_m70BCBA4C3CEEC7B08A3A9A245BB01ACE9FCAFC16_gshared (AvatarBehaviourNGO_t24B8A1C8AD46098E71F1E9BC50386FFDBD958634* __this, uint64_t ___0_prev, uint64_t ___1_val, const RuntimeMethod* method) 
 {
 	{
@@ -23384,7 +23384,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarBehaviourNGO_OnAvatarIdChanged_Tis
 		return;
 	}
 }
-// Method Definition Index: 136624
+// Method Definition Index: 136622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarBehaviourNGO_OnAvatarIdChanged_TisIl2CppFullySharedGenericAny_mABED2DD8723E947350B412EA7C5579AC1349A53D_gshared (AvatarBehaviourNGO_t24B8A1C8AD46098E71F1E9BC50386FFDBD958634* __this, Il2CppFullySharedGenericAny ___0_prev, Il2CppFullySharedGenericAny ___1_val, const RuntimeMethod* method) 
 {
 	{
