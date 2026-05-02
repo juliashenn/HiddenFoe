@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4546726288952452534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: M1911 Magazine_Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6089484274756146289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Magazine_Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4354175183398948841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: M1911 Handgun_Black (Shooting)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4420824124597828971}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Barrel_Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,8 @@ GameObject:
   - component: {fileID: 2076388031072752104}
   - component: {fileID: 5807936267624105501}
   - component: {fileID: 7485793788050412876}
-  m_Layer: 0
+  - component: {fileID: -2601023427527556182}
+  m_Layer: 6
   m_Name: '[BuildingBlock] Black Gun Final!!!_)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 1832496764
+  GlobalObjectIdHash: 1649003034
   InScenePlacedSourceGlobalObjectIdHash: 1100380411
   DeferredDespawnTick: 0
   Ownership: 1
@@ -437,6 +438,19 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 1
   AutoSetKinematicOnDespawn: 1
+--- !u!114 &-2601023427527556182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553273414938580946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e5e53855f37504e97a12689f477968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  weaponType: 1
 --- !u!1 &6539592520839671001
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +462,7 @@ GameObject:
   - component: {fileID: 2305823723715541659}
   - component: {fileID: 7984808777723363747}
   - component: {fileID: 5472875080629328484}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +552,7 @@ GameObject:
   - component: {fileID: 5388992842103240081}
   - component: {fileID: 506750172138920684}
   - component: {fileID: 5087348589839368937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CasingExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +645,7 @@ GameObject:
   - component: {fileID: 1346292430302607891}
   - component: {fileID: 2335197508756291254}
   - component: {fileID: 4261577487655281043}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: M1911 Handgun_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +884,7 @@ GameObject:
   - component: {fileID: 1130616382368884745}
   - component: {fileID: 233341583777031886}
   - component: {fileID: 3273835419910676412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,7 +974,7 @@ GameObject:
   - component: {fileID: 5271631740278103109}
   - component: {fileID: 6339404260542752404}
   - component: {fileID: 5788195970834084522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1052,7 +1066,7 @@ GameObject:
   - component: {fileID: 4440137512079943398}
   - component: {fileID: 3389393810877859860}
   - component: {fileID: 6652751160666968788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: '[BuildingBlock] HandGrabInstallationRoutine'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1169,7 +1183,7 @@ GameObject:
   - component: {fileID: 7208976152768997887}
   - component: {fileID: 1532846277843431042}
   - component: {fileID: 4718579845426158495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: M1911 Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1257,7 +1271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1367465584197937827}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ejection_Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}

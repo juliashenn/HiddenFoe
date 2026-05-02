@@ -1,7 +1,14 @@
 using UnityEngine;
-
+public enum WeaponType 
+    {
+        Knife,
+        Gun,
+        Trap,
+        Bullet
+    }
 public class Weapon : MonoBehaviour
 {
+    public WeaponType weaponType;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
