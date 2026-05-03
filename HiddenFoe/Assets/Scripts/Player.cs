@@ -7,43 +7,27 @@ public class Player : NetworkBehaviour
     public GameObject winCanvas;
     public GameObject loseCanvas;
 
-    private bool isDead = false;
+    public bool IsDead = false;
+    [HideInInspector] public bool IsLocalPlayer = false;
 
     private void Start()
     {
-        if (endScreen == null)
-            Debug.LogError("[Player] endScreen is NULL!");
-        else
+        if (endScreen != null)
             endScreen.gameObject.SetActive(false);
+        else
+            Debug.LogError("[Player] endScreen is NULL!");
     }
 
     public override void OnNetworkSpawn()
     {
-        Debug.Log($"[Player] OnNetworkSpawn — NetworkObjectId={NetworkObjectId}");
+        Debug.Log($"[Player] OnNetworkSpawn on '{gameObject.name}' — NetworkObjectId={NetworkObjectId}");
         if (endScreen != null)
             endScreen.gameObject.SetActive(false);
     }
 
-    public void TriggerDeath()
-    {
-        Debug.Log($"[Player] TriggerDeath() — isDead={isDead}, NetworkObjectId={NetworkObjectId}");
-        if (isDead) return;
-        isDead = true;
-
-        if (LevelManager.Instance == null)
-        {
-            Debug.LogError("[Player] TriggerDeath: LevelManager.Instance is NULL!");
-            return;
-        }
-
-        // RPC goes through LevelManager since that NetworkObject is properly spawned
-        Debug.Log($"[Player] Calling LevelManager.ReportDeathServerRpc with NetworkObjectId={NetworkObjectId}");
-        LevelManager.Instance.ReportDeathServerRpc(NetworkObjectId);
-    }
-
     public void ShowResult(bool didLose)
     {
-        Debug.Log($"[Player] ShowResult(didLose={didLose})");
+        Debug.Log($"[Player] ShowResult(didLose={didLose}) on '{gameObject.name}'");
 
         if (endScreen == null) { Debug.LogError("[Player] endScreen is NULL!"); return; }
         if (winCanvas == null) { Debug.LogError("[Player] winCanvas is NULL!"); return; }
@@ -55,12 +39,12 @@ public class Player : NetworkBehaviour
 
         if (didLose)
         {
-            Debug.Log("[Player] Showing LOSE canvas.");
+            Debug.Log($"[Player] '{gameObject.name}' showing LOSE canvas.");
             loseCanvas.SetActive(true);
         }
         else
         {
-            Debug.Log("[Player] Showing WIN canvas.");
+            Debug.Log($"[Player] '{gameObject.name}' showing WIN canvas.");
             winCanvas.SetActive(true);
         }
     }

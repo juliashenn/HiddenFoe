@@ -57,58 +57,71 @@ public class LevelManager : NetworkBehaviour
     void DisplayTime(float timeToDisplay)
     {
         if (Timer == null) return;
-        timeToDisplay += 1;
         Timer.text = $"{Mathf.FloorToInt(timeToDisplay / 60):00}:{Mathf.FloorToInt(timeToDisplay % 60):00}";
     }
 
-    /// <summary>
-    /// Called by PlayerCollisionDetector directly — no RPC needed on Player.
-    /// This RPC lives on LevelManager which we know is properly spawned.
-    /// </summary>
     [ServerRpc(RequireOwnership = false)]
-    public void ReportDeathServerRpc(ulong deadNetworkObjectId)
+    public void ReportDeathServerRpc()
     {
-        Debug.Log($"[LevelManager][SERVER] ReportDeathServerRpc received — deadNetworkObjectId={deadNetworkObjectId}");
-        PlayerDied(deadNetworkObjectId);
-    }
-
-    public void PlayerDied(ulong deadNetworkObjectId)
-    {
-        Debug.Log($"[LevelManager] PlayerDied — deadNetworkObjectId={deadNetworkObjectId}, gameEnded={gameEnded.Value}");
-        if (!IsServer || gameEnded.Value) return;
-
+        Debug.Log($"[LevelManager][SERVER] ReportDeathServerRpc received. gameEnded={gameEnded.Value}");
+        if (gameEnded.Value) return;
         gameEnded.Value = true;
-        NotifyGameOverClientRpc(deadNetworkObjectId, false);
+        timeRunning.Value = false;
+        NotifyOthersWonClientRpc();
     }
 
     void OnTimeRanOut()
     {
         if (gameEnded.Value) return;
         gameEnded.Value = true;
-        NotifyGameOverClientRpc(ulong.MaxValue, true);
+        NotifyTimeOutClientRpc();
     }
 
     [ClientRpc]
-    void NotifyGameOverClientRpc(ulong deadNetworkObjectId, bool isTimeOut)
+    void NotifyTimeOutClientRpc()
     {
-        Debug.Log($"[LevelManager][CLIENT] NotifyGameOverClientRpc — deadNetworkObjectId={deadNetworkObjectId}, isTimeOut={isTimeOut}");
+        Debug.Log("[LevelManager][CLIENT] Timeout — showing result for local player.");
+        ShowResultForLocalPlayer(true); // change to false if everyone wins on timeout
+    }
+
+    [ClientRpc]
+    void NotifyOthersWonClientRpc()
+    {
+        Debug.Log("[LevelManager][CLIENT] NotifyOthersWonClientRpc received.");
 
         Player[] players = FindObjectsByType<Player>(FindObjectsSortMode.None);
         Debug.Log($"[LevelManager][CLIENT] Found {players.Length} Player(s)");
 
         foreach (var p in players)
         {
-            // Local player is whichever one has PlayerCollisionDetector
-            PlayerCollision detector = p.GetComponent<PlayerCollision>();
-            if (detector == null) continue;
+            Debug.Log($"[LevelManager][CLIENT] Player '{p.gameObject.name}' IsLocalPlayer={p.IsLocalPlayer} IsDead={p.IsDead}");
+        }
 
-            bool didLose = isTimeOut || (p.NetworkObjectId == deadNetworkObjectId);
-            Debug.Log($"[LevelManager][CLIENT] Local player NetworkObjectId={p.NetworkObjectId}, didLose={didLose}");
+        ShowResultForLocalPlayer(false);
+    }
+
+    private void ShowResultForLocalPlayer(bool didLose)
+    {
+        Player[] players = FindObjectsByType<Player>(FindObjectsSortMode.None);
+
+        foreach (var p in players)
+        {
+            if (!p.IsLocalPlayer) continue;
+
+            // Already showed lose locally when they were hit — don't overwrite with win
+            if (p.IsDead)
+            {
+                Debug.Log("[LevelManager] Local player is already dead, not overwriting with win.");
+                return;
+            }
+
+            Debug.Log($"[LevelManager] Showing result didLose={didLose} for local player '{p.gameObject.name}'");
             p.ShowResult(didLose);
             return;
         }
 
-        Debug.LogWarning("[LevelManager][CLIENT] Could not find local Player with PlayerCollisionDetector!");
+        Debug.LogWarning("[LevelManager] No local player found (IsLocalPlayer=true). " +
+                         "Make sure PlayerCollisionDetector is on the player prefab.");
     }
 }
 
