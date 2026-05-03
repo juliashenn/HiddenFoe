@@ -7036,14 +7036,14 @@ struct U3CAnimateIconU3Ed__26_t20514EE0E00340BE17D0EA4E01C760A8152581E7  : publi
 	RuntimeObject* ___U3CU3E2__current;
 	InventorySlotItemHandler_t358C4CBA78EDCA997DBF6D4B6D6ED939F7006786* ___U3CU3E4__this;
 };
-struct U3CAnimateItemToSlotU3Ed__34_tAC0710461626588E3555871A82DF0EEAF864B91B  : public RuntimeObject
+struct U3CAnimateItemToSlotU3Ed__36_tD2F8CDA0718AD86F2532B43B7ED7790CDECCECA9  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	InventorySlotItemHandler_t358C4CBA78EDCA997DBF6D4B6D6ED939F7006786* ___U3CU3E4__this;
 	float ___U3CtimerU3E5__2;
 };
-struct U3CGrabNewItemU3Ed__33_tEF8955F2A4B17894B68EBD260454847D0ED4EBD6  : public RuntimeObject
+struct U3CGrabAfterStabilizedU3Ed__33_t017C3E8AE182E35E4082BAA3D361E02E21D68B9C  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -32553,8 +32553,8 @@ struct U3CAnimateMeshModelOpenOrCloseU3Ed__27_t16906C3CC84BC6A06F52165D464EEEC64
 	float ___duration;
 	InventorySlotItemHandler_t358C4CBA78EDCA997DBF6D4B6D6ED939F7006786* ___U3CU3E4__this;
 	float ___U3CtimerU3E5__2;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CinitialScaleU3E5__3;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CtargetScaleU3E5__4;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CstartU3E5__3;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CendU3E5__4;
 };
 struct StatusOptions_t3E45A91E090F611B8A07A0C53F2954E220B3B0E1 
 {
@@ -70488,11 +70488,11 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize15778 = { sizeof(InventorySl
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize15779;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize15779 = { sizeof(U3CAnimateIconU3Ed__26_t20514EE0E00340BE17D0EA4E01C760A8152581E7), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize15780;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize15780 = { sizeof(U3CAnimateItemToSlotU3Ed__34_tAC0710461626588E3555871A82DF0EEAF864B91B), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize15780 = { sizeof(U3CAnimateItemToSlotU3Ed__36_tD2F8CDA0718AD86F2532B43B7ED7790CDECCECA9), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize15781;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize15781 = { sizeof(U3CAnimateMeshModelOpenOrCloseU3Ed__27_t16906C3CC84BC6A06F52165D464EEEC6453F7CD2), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize15782;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize15782 = { sizeof(U3CGrabNewItemU3Ed__33_tEF8955F2A4B17894B68EBD260454847D0ED4EBD6), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize15782 = { sizeof(U3CGrabAfterStabilizedU3Ed__33_t017C3E8AE182E35E4082BAA3D361E02E21D68B9C), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize15783;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize15783 = { sizeof(InventorySlotItemHandler_t358C4CBA78EDCA997DBF6D4B6D6ED939F7006786), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize15784;

@@ -35,9 +35,9 @@ static const int32_t s_InvokerIndices[9] =
 	19375,
 	8228,
 	25312,
-	35323,
-	35323,
-	35323,
+	35324,
+	35324,
+	35324,
 	31859,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_VehiclesModule_CodeGenModule;

@@ -461,7 +461,9 @@ extern void InventorySlotItemHandler_AddItemToSlot_mAF96BFFA68B9D8C6D788639C72ED
 extern void InventorySlotItemHandler_RetrieveItemFromSlot_mDE572FC4E664F85CCACCD6A5AE3BD75AE236141F (void);
 extern void InventorySlotItemHandler_GetItemInHand_m44869A29E8E7C79058CD13A7BA27247CE1EC8385 (void);
 extern void InventorySlotItemHandler_ReleaseItemFromHand_m1620F0772E1DD38206A73893AC069841FEB9BBC7 (void);
-extern void InventorySlotItemHandler_GrabNewItem_m54EE6534AEFFC951FE500DF93B55CA5F3F2B0FBF (void);
+extern void InventorySlotItemHandler_GrabAfterStabilized_m4108DFC39A9F36149AB5C8FA3F7BFB9BE90B5DBD (void);
+extern void InventorySlotItemHandler_PrepareForGrab_mEFBEC55A0E3F7C125823A3C5C9DA1AF58D66E0CF (void);
+extern void InventorySlotItemHandler_SetPhysicsStored_m8BF71DC476F568789AA7179E1947048905D43875 (void);
 extern void InventorySlotItemHandler_AnimateItemToSlot_m292F119E919B40E782DB25EE35540D6A7B5B7423 (void);
 extern void InventorySlotItemHandler_SnapItemToSlot_mF092CC46B70FC7FD526D1B78E3B38D3670B8B97B (void);
 extern void InventorySlotItemHandler_SetupNewMeshClone_mADA3A84EA4981CD0F7201C0A683CA930885C679A (void);
@@ -474,24 +476,24 @@ extern void U3CAnimateIconU3Ed__26_MoveNext_mC996280F47050886FD2FC0A091BAED44E2A
 extern void U3CAnimateIconU3Ed__26_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2E1229205FDCC876C54E6A351AD9D73A8101C7D9 (void);
 extern void U3CAnimateIconU3Ed__26_System_Collections_IEnumerator_Reset_m56E73C27ECA6924045AE439CCACBB105CF692B67 (void);
 extern void U3CAnimateIconU3Ed__26_System_Collections_IEnumerator_get_Current_m09F8DBA7F6ACCF12A9C0D161356325CD114E9C04 (void);
-extern void U3CAnimateItemToSlotU3Ed__34__ctor_m6D885D061AE7148991584D831D59CE53E04872FE (void);
-extern void U3CAnimateItemToSlotU3Ed__34_System_IDisposable_Dispose_mDFE1379399941CC1853201BB5FD24B379AE65A50 (void);
-extern void U3CAnimateItemToSlotU3Ed__34_MoveNext_mEC8FA6D6B4F9327C7F06EC06D6329170A31B0049 (void);
-extern void U3CAnimateItemToSlotU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m74AF33E5CB4447281AB5A8F9FA2C6C0188562D97 (void);
-extern void U3CAnimateItemToSlotU3Ed__34_System_Collections_IEnumerator_Reset_m2E83AEB14173165DF6D8AD3E1C7A1BCFB203A117 (void);
-extern void U3CAnimateItemToSlotU3Ed__34_System_Collections_IEnumerator_get_Current_mAEA5F03E59AA150053F1FDAB9F27654024AD4B4C (void);
+extern void U3CAnimateItemToSlotU3Ed__36__ctor_mDA298967B97EE3499ADFDE50D54C546B0FF6DA43 (void);
+extern void U3CAnimateItemToSlotU3Ed__36_System_IDisposable_Dispose_mFED315AFF986FBECEEA461E77AF0F3D5A03B9DF7 (void);
+extern void U3CAnimateItemToSlotU3Ed__36_MoveNext_m795BC96929BDBE854B65419C1B04B0AFC494F2EB (void);
+extern void U3CAnimateItemToSlotU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0894A99E4DF7B485C00AC81A7AA4F5D0AC236FBA (void);
+extern void U3CAnimateItemToSlotU3Ed__36_System_Collections_IEnumerator_Reset_m3E6EE93696EE12F8DF6E8D122A5BCE2425BEFF76 (void);
+extern void U3CAnimateItemToSlotU3Ed__36_System_Collections_IEnumerator_get_Current_mBA485D8B9DEE1CFCF69A3EA03FE5DDA7E038DA5E (void);
 extern void U3CAnimateMeshModelOpenOrCloseU3Ed__27__ctor_mED42C6EE0F29599CF30B931278D96DB33D0C9481 (void);
 extern void U3CAnimateMeshModelOpenOrCloseU3Ed__27_System_IDisposable_Dispose_m5E5E3995ADA6BF8EEF33615B44DE8F580C289802 (void);
 extern void U3CAnimateMeshModelOpenOrCloseU3Ed__27_MoveNext_m196825E5970B4893F7A3F4C8DB820B68B37A1185 (void);
 extern void U3CAnimateMeshModelOpenOrCloseU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1423E677F1B9B4B135F0FF955D8CA09C1E6E86D4 (void);
 extern void U3CAnimateMeshModelOpenOrCloseU3Ed__27_System_Collections_IEnumerator_Reset_m86240DF90F759CA4FB6525DED1DFD96FE64FB5C2 (void);
 extern void U3CAnimateMeshModelOpenOrCloseU3Ed__27_System_Collections_IEnumerator_get_Current_mECAA84BD516BE5D04700AAD31B3705E2187967AB (void);
-extern void U3CGrabNewItemU3Ed__33__ctor_m901270E535CDAF26734D590E0E2296F38106C525 (void);
-extern void U3CGrabNewItemU3Ed__33_System_IDisposable_Dispose_mBBC12B952A83B0CAE43866D669AD4E0BCE338B37 (void);
-extern void U3CGrabNewItemU3Ed__33_MoveNext_m304759EFF4EE30082672082ED5805E962AFF9025 (void);
-extern void U3CGrabNewItemU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9BE839B490E7EB6C9DF8489A39FE8118ABB8801A (void);
-extern void U3CGrabNewItemU3Ed__33_System_Collections_IEnumerator_Reset_m8A5FEC9A4E1BA7D9E011CA3F157CCC1D714E50C2 (void);
-extern void U3CGrabNewItemU3Ed__33_System_Collections_IEnumerator_get_Current_mA3D9840A8676F2CC0E78E4DF90DC81A0B9D4A8EC (void);
+extern void U3CGrabAfterStabilizedU3Ed__33__ctor_mB704190DB90755C98203A55D072E4C37409779CE (void);
+extern void U3CGrabAfterStabilizedU3Ed__33_System_IDisposable_Dispose_m9391B9178BFAAD8E624D96AE3A98A65B6FB7383A (void);
+extern void U3CGrabAfterStabilizedU3Ed__33_MoveNext_m4B3ED2D637F0ADB012529E0142BFA6074291BBDA (void);
+extern void U3CGrabAfterStabilizedU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4F627F12D20D3526745A5A1F3E9BA5C30BBAEA2B (void);
+extern void U3CGrabAfterStabilizedU3Ed__33_System_Collections_IEnumerator_Reset_m3B6B5DC91DBA4982E7446423A975DBB37EDBE387 (void);
+extern void U3CGrabAfterStabilizedU3Ed__33_System_Collections_IEnumerator_get_Current_m46BE18E8E46713C776C7BB865C4C62D953A7CF15 (void);
 extern void InventorySlotTextUpdater_Awake_mEA5034897B8CDE42B36753FCEFDA94C96D2743A1 (void);
 extern void InventorySlotTextUpdater_CheckTypes_m626BDAABD0DDAE0A577C8FCC1A5CB6BF2F2D0158 (void);
 extern void InventorySlotTextUpdater_CheckAmmo_m039959827F1B3AB309AEC3B856A0AC1A24FC9C5E (void);
@@ -1568,7 +1570,7 @@ extern void U3CU3Ec__cctor_mD0FDB5B4059B2A0251BA34B9B54A8CFFF660D145 (void);
 extern void U3CU3Ec__ctor_mF35AB0C3E2793099DAA115457368740FDE027BFD (void);
 extern void U3CU3Ec_U3CSmoothNormalsU3Eb__30_0_m5C3DFFADF9ACE675AFAA771DC757B4AD0F22FA5F (void);
 extern void U3CU3Ec_U3CSmoothNormalsU3Eb__30_1_m8F4717332796D1388455F6B79ABCE3195731FFE8 (void);
-static Il2CppMethodPointer s_methodPointers[1575] = 
+static Il2CppMethodPointer s_methodPointers[1577] = 
 {
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m7AB76381F5FD38E9D42FDE1077C24277D421AD8A,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mFFFAFE8FE0F9CDF9ECF0806A227015703E9C339E,
@@ -2026,7 +2028,9 @@ static Il2CppMethodPointer s_methodPointers[1575] =
 	InventorySlotItemHandler_RetrieveItemFromSlot_mDE572FC4E664F85CCACCD6A5AE3BD75AE236141F,
 	InventorySlotItemHandler_GetItemInHand_m44869A29E8E7C79058CD13A7BA27247CE1EC8385,
 	InventorySlotItemHandler_ReleaseItemFromHand_m1620F0772E1DD38206A73893AC069841FEB9BBC7,
-	InventorySlotItemHandler_GrabNewItem_m54EE6534AEFFC951FE500DF93B55CA5F3F2B0FBF,
+	InventorySlotItemHandler_GrabAfterStabilized_m4108DFC39A9F36149AB5C8FA3F7BFB9BE90B5DBD,
+	InventorySlotItemHandler_PrepareForGrab_mEFBEC55A0E3F7C125823A3C5C9DA1AF58D66E0CF,
+	InventorySlotItemHandler_SetPhysicsStored_m8BF71DC476F568789AA7179E1947048905D43875,
 	InventorySlotItemHandler_AnimateItemToSlot_m292F119E919B40E782DB25EE35540D6A7B5B7423,
 	InventorySlotItemHandler_SnapItemToSlot_mF092CC46B70FC7FD526D1B78E3B38D3670B8B97B,
 	InventorySlotItemHandler_SetupNewMeshClone_mADA3A84EA4981CD0F7201C0A683CA930885C679A,
@@ -2039,24 +2043,24 @@ static Il2CppMethodPointer s_methodPointers[1575] =
 	U3CAnimateIconU3Ed__26_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2E1229205FDCC876C54E6A351AD9D73A8101C7D9,
 	U3CAnimateIconU3Ed__26_System_Collections_IEnumerator_Reset_m56E73C27ECA6924045AE439CCACBB105CF692B67,
 	U3CAnimateIconU3Ed__26_System_Collections_IEnumerator_get_Current_m09F8DBA7F6ACCF12A9C0D161356325CD114E9C04,
-	U3CAnimateItemToSlotU3Ed__34__ctor_m6D885D061AE7148991584D831D59CE53E04872FE,
-	U3CAnimateItemToSlotU3Ed__34_System_IDisposable_Dispose_mDFE1379399941CC1853201BB5FD24B379AE65A50,
-	U3CAnimateItemToSlotU3Ed__34_MoveNext_mEC8FA6D6B4F9327C7F06EC06D6329170A31B0049,
-	U3CAnimateItemToSlotU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m74AF33E5CB4447281AB5A8F9FA2C6C0188562D97,
-	U3CAnimateItemToSlotU3Ed__34_System_Collections_IEnumerator_Reset_m2E83AEB14173165DF6D8AD3E1C7A1BCFB203A117,
-	U3CAnimateItemToSlotU3Ed__34_System_Collections_IEnumerator_get_Current_mAEA5F03E59AA150053F1FDAB9F27654024AD4B4C,
+	U3CAnimateItemToSlotU3Ed__36__ctor_mDA298967B97EE3499ADFDE50D54C546B0FF6DA43,
+	U3CAnimateItemToSlotU3Ed__36_System_IDisposable_Dispose_mFED315AFF986FBECEEA461E77AF0F3D5A03B9DF7,
+	U3CAnimateItemToSlotU3Ed__36_MoveNext_m795BC96929BDBE854B65419C1B04B0AFC494F2EB,
+	U3CAnimateItemToSlotU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0894A99E4DF7B485C00AC81A7AA4F5D0AC236FBA,
+	U3CAnimateItemToSlotU3Ed__36_System_Collections_IEnumerator_Reset_m3E6EE93696EE12F8DF6E8D122A5BCE2425BEFF76,
+	U3CAnimateItemToSlotU3Ed__36_System_Collections_IEnumerator_get_Current_mBA485D8B9DEE1CFCF69A3EA03FE5DDA7E038DA5E,
 	U3CAnimateMeshModelOpenOrCloseU3Ed__27__ctor_mED42C6EE0F29599CF30B931278D96DB33D0C9481,
 	U3CAnimateMeshModelOpenOrCloseU3Ed__27_System_IDisposable_Dispose_m5E5E3995ADA6BF8EEF33615B44DE8F580C289802,
 	U3CAnimateMeshModelOpenOrCloseU3Ed__27_MoveNext_m196825E5970B4893F7A3F4C8DB820B68B37A1185,
 	U3CAnimateMeshModelOpenOrCloseU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1423E677F1B9B4B135F0FF955D8CA09C1E6E86D4,
 	U3CAnimateMeshModelOpenOrCloseU3Ed__27_System_Collections_IEnumerator_Reset_m86240DF90F759CA4FB6525DED1DFD96FE64FB5C2,
 	U3CAnimateMeshModelOpenOrCloseU3Ed__27_System_Collections_IEnumerator_get_Current_mECAA84BD516BE5D04700AAD31B3705E2187967AB,
-	U3CGrabNewItemU3Ed__33__ctor_m901270E535CDAF26734D590E0E2296F38106C525,
-	U3CGrabNewItemU3Ed__33_System_IDisposable_Dispose_mBBC12B952A83B0CAE43866D669AD4E0BCE338B37,
-	U3CGrabNewItemU3Ed__33_MoveNext_m304759EFF4EE30082672082ED5805E962AFF9025,
-	U3CGrabNewItemU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9BE839B490E7EB6C9DF8489A39FE8118ABB8801A,
-	U3CGrabNewItemU3Ed__33_System_Collections_IEnumerator_Reset_m8A5FEC9A4E1BA7D9E011CA3F157CCC1D714E50C2,
-	U3CGrabNewItemU3Ed__33_System_Collections_IEnumerator_get_Current_mA3D9840A8676F2CC0E78E4DF90DC81A0B9D4A8EC,
+	U3CGrabAfterStabilizedU3Ed__33__ctor_mB704190DB90755C98203A55D072E4C37409779CE,
+	U3CGrabAfterStabilizedU3Ed__33_System_IDisposable_Dispose_m9391B9178BFAAD8E624D96AE3A98A65B6FB7383A,
+	U3CGrabAfterStabilizedU3Ed__33_MoveNext_m4B3ED2D637F0ADB012529E0142BFA6074291BBDA,
+	U3CGrabAfterStabilizedU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4F627F12D20D3526745A5A1F3E9BA5C30BBAEA2B,
+	U3CGrabAfterStabilizedU3Ed__33_System_Collections_IEnumerator_Reset_m3B6B5DC91DBA4982E7446423A975DBB37EDBE387,
+	U3CGrabAfterStabilizedU3Ed__33_System_Collections_IEnumerator_get_Current_m46BE18E8E46713C776C7BB865C4C62D953A7CF15,
 	InventorySlotTextUpdater_Awake_mEA5034897B8CDE42B36753FCEFDA94C96D2743A1,
 	InventorySlotTextUpdater_CheckTypes_m626BDAABD0DDAE0A577C8FCC1A5CB6BF2F2D0158,
 	InventorySlotTextUpdater_CheckAmmo_m039959827F1B3AB309AEC3B856A0AC1A24FC9C5E,
@@ -3159,17 +3163,17 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[9] =
 {
 	{ 0x0600013B, TransformStruct__ctor_mC167F471E79A1F886EB10C0F261C0220B2C9798D_AdjustorThunk },
 	{ 0x0600013C, TransformStruct_SetTransformStruct_mA2B84F891036EC062A6688630906176E8B2864A0_AdjustorThunk },
-	{ 0x06000227, U3CSetDoorStartingPositionU3Ed__20_MoveNext_mF5DCC5A99AFC07850C03B85C3EDFED80C7D8AEFD_AdjustorThunk },
-	{ 0x06000228, U3CSetDoorStartingPositionU3Ed__20_SetStateMachine_m84F67DF68A5FE583A65F033D90140F2598A2958D_AdjustorThunk },
-	{ 0x060004AC, TrackedRotation_get_TotalOffset_m55A9C30BC0553651C21A45B0EFB672CBF82606C7_AdjustorThunk },
-	{ 0x060004AD, TrackedRotation_Reset_m932BFB3126D68289BF17C8783F40C2480E48FA50_AdjustorThunk },
-	{ 0x060004AE, TrackedRotation_SetBaseFromVector_m58CD555B5D67EF0B538A43EEF7422BE9D1DB6126_AdjustorThunk },
-	{ 0x060004AF, TrackedRotation_SetTargetFromVector_m35403ADE34A8ED340B800F606C441C784C84ECA4_AdjustorThunk },
-	{ 0x06000501, colliderData__ctor_m39C6B51D5FD769D7BD9244C642D4FD24C8575A46_AdjustorThunk },
+	{ 0x06000229, U3CSetDoorStartingPositionU3Ed__20_MoveNext_mF5DCC5A99AFC07850C03B85C3EDFED80C7D8AEFD_AdjustorThunk },
+	{ 0x0600022A, U3CSetDoorStartingPositionU3Ed__20_SetStateMachine_m84F67DF68A5FE583A65F033D90140F2598A2958D_AdjustorThunk },
+	{ 0x060004AE, TrackedRotation_get_TotalOffset_m55A9C30BC0553651C21A45B0EFB672CBF82606C7_AdjustorThunk },
+	{ 0x060004AF, TrackedRotation_Reset_m932BFB3126D68289BF17C8783F40C2480E48FA50_AdjustorThunk },
+	{ 0x060004B0, TrackedRotation_SetBaseFromVector_m58CD555B5D67EF0B538A43EEF7422BE9D1DB6126_AdjustorThunk },
+	{ 0x060004B1, TrackedRotation_SetTargetFromVector_m35403ADE34A8ED340B800F606C441C784C84ECA4_AdjustorThunk },
+	{ 0x06000503, colliderData__ctor_m39C6B51D5FD769D7BD9244C642D4FD24C8575A46_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[1575] = 
+static const int32_t s_InvokerIndices[1577] = 
 {
-	41161,
+	41162,
 	25312,
 	25047,
 	25312,
@@ -3300,7 +3304,7 @@ static const int32_t s_InvokerIndices[1575] =
 	19245,
 	19713,
 	19713,
-	41100,
+	41101,
 	25312,
 	16741,
 	16747,
@@ -3386,7 +3390,7 @@ static const int32_t s_InvokerIndices[1575] =
 	3273,
 	25312,
 	25312,
-	41100,
+	41101,
 	25312,
 	18963,
 	25312,
@@ -3451,12 +3455,12 @@ static const int32_t s_InvokerIndices[1575] =
 	25312,
 	25312,
 	31800,
-	35233,
-	40979,
+	35234,
+	40980,
 	25312,
-	41100,
+	41101,
 	25312,
-	41100,
+	41101,
 	25312,
 	16741,
 	25047,
@@ -3475,8 +3479,8 @@ static const int32_t s_InvokerIndices[1575] =
 	31089,
 	25312,
 	19245,
-	38440,
-	35589,
+	38441,
+	35590,
 	25312,
 	25312,
 	19245,
@@ -3543,14 +3547,14 @@ static const int32_t s_InvokerIndices[1575] =
 	4819,
 	25312,
 	25312,
-	38966,
-	39507,
-	39507,
-	39507,
-	38440,
+	38967,
+	39508,
+	39508,
+	39508,
+	38441,
 	-1,
 	-1,
-	41100,
+	41101,
 	25312,
 	13945,
 	25312,
@@ -3567,14 +3571,14 @@ static const int32_t s_InvokerIndices[1575] =
 	19245,
 	4823,
 	25312,
-	39507,
-	39507,
-	39507,
-	39507,
-	39507,
-	39507,
-	39507,
-	39507,
+	39508,
+	39508,
+	39508,
+	39508,
+	39508,
+	39508,
+	39508,
+	39508,
 	25047,
 	25047,
 	24763,
@@ -3623,14 +3627,16 @@ static const int32_t s_InvokerIndices[1575] =
 	19245,
 	19245,
 	10050,
-	38966,
+	38967,
 	10086,
 	7687,
+	19245,
+	19245,
 	25047,
 	25312,
 	19245,
 	25312,
-	38413,
+	38414,
 	25312,
 	19128,
 	25312,
@@ -4021,14 +4027,14 @@ static const int32_t s_InvokerIndices[1575] =
 	25312,
 	25312,
 	25312,
-	35581,
+	35582,
 	25312,
 	25312,
 	25312,
 	25312,
 	25312,
 	25312,
-	41100,
+	41101,
 	25312,
 	13945,
 	25312,
@@ -4062,7 +4068,7 @@ static const int32_t s_InvokerIndices[1575] =
 	25312,
 	25312,
 	25312,
-	35589,
+	35590,
 	25312,
 	25312,
 	25047,
@@ -4180,10 +4186,10 @@ static const int32_t s_InvokerIndices[1575] =
 	25047,
 	25312,
 	25047,
-	39507,
-	39507,
-	39507,
-	39507,
+	39508,
+	39508,
+	39508,
+	39508,
 	25312,
 	25312,
 	10245,
@@ -4199,7 +4205,7 @@ static const int32_t s_InvokerIndices[1575] =
 	25047,
 	25312,
 	25312,
-	41100,
+	41101,
 	19375,
 	19128,
 	25312,
@@ -4497,13 +4503,13 @@ static const int32_t s_InvokerIndices[1575] =
 	25047,
 	25312,
 	25047,
-	39507,
-	39507,
+	39508,
+	39508,
 	34292,
 	34292,
 	30908,
-	39507,
-	41100,
+	39508,
+	41101,
 	19128,
 	25312,
 	24763,
@@ -4672,9 +4678,9 @@ static const int32_t s_InvokerIndices[1575] =
 	18970,
 	25312,
 	25312,
-	39507,
-	39507,
-	38966,
+	39508,
+	39508,
+	38967,
 	25312,
 	25312,
 	19245,
@@ -4738,9 +4744,9 @@ static const int32_t s_InvokerIndices[1575] =
 	10086,
 	25312,
 	25312,
-	41100,
+	41101,
 	25312,
-	41100,
+	41101,
 	25312,
 	5110,
 	17227,
@@ -4787,7 +4793,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_MikeNspiredXRIStarterKit_Runtime_Cod
 const Il2CppCodeGenModule g_MikeNspiredXRIStarterKit_Runtime_CodeGenModule = 
 {
 	"MikeNspiredXRIStarterKit.Runtime.dll",
-	1575,
+	1577,
 	s_methodPointers,
 	9,
 	s_adjustorThunks,

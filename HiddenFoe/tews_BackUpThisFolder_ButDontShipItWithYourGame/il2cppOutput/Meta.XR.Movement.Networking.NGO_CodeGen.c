@@ -142,7 +142,7 @@ static Il2CppMethodPointer s_methodPointers[65] =
 };
 static const int32_t s_InvokerIndices[65] = 
 {
-	41158,
+	41159,
 	25312,
 	24763,
 	25047,
@@ -187,7 +187,7 @@ static const int32_t s_InvokerIndices[65] =
 	19033,
 	19032,
 	8391,
-	40979,
+	40980,
 	24928,
 	19128,
 	25047,
@@ -201,12 +201,12 @@ static const int32_t s_InvokerIndices[65] =
 	25312,
 	4961,
 	25312,
-	41100,
+	41101,
 	25312,
 	25312,
 	32142,
 	25047,
-	41100,
+	41101,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Meta_XR_Movement_Networking_NGO_CodeGenModule;
 const Il2CppCodeGenModule g_Meta_XR_Movement_Networking_NGO_CodeGenModule = 
