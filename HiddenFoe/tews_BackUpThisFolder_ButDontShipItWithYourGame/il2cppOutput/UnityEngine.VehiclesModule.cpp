@@ -139,7 +139,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider__ctor_m8975C6CCFC0E5740C523DB4A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 149049
+// Method Definition Index: 149062
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_set_motorTorque_m4958AAF7D867CF7570420F9BAFAF04DC904F02A8 (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -175,7 +175,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 149050
+// Method Definition Index: 149063
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_set_brakeTorque_mB9B216C57C275470907C7DB35185E2F192DC8DAB (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -211,7 +211,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 149051
+// Method Definition Index: 149064
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_set_steerAngle_m7BF83B27D8956355F873537939BE9F35CF3113C3 (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -247,7 +247,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 149052
+// Method Definition Index: 149065
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_GetWorldPose_m8C41FA2AE9ED543AB94A6E3226523A2FE83FA890 (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_pos, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___1_quat, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -284,7 +284,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 149053
+// Method Definition Index: 149066
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider__ctor_mD44B2C97960274797DABD055BBEB18E664DAD906 (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, const RuntimeMethod* method) 
 {
 	{
@@ -292,7 +292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider__ctor_mD44B2C97960274797DA
 		return;
 	}
 }
-// Method Definition Index: 149054
+// Method Definition Index: 149067
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_set_motorTorque_Injected_mDC3AFD111B0711D6D7450F3FDCC18386352888C2 (intptr_t ___0__unity_self, float ___1_value, const RuntimeMethod* method) 
 {
 	typedef void (*WheelCollider_set_motorTorque_Injected_mDC3AFD111B0711D6D7450F3FDCC18386352888C2_ftn) (intptr_t, float);
@@ -301,7 +301,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_set_motorTorque_Injected_m
 	_il2cpp_icall_func = (WheelCollider_set_motorTorque_Injected_mDC3AFD111B0711D6D7450F3FDCC18386352888C2_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WheelCollider::set_motorTorque_Injected(System.IntPtr,System.Single)");
 	_il2cpp_icall_func(___0__unity_self, ___1_value);
 }
-// Method Definition Index: 149055
+// Method Definition Index: 149068
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_set_brakeTorque_Injected_mF745FF43BCCE204923ABCF9FD3F0725BFB6927E2 (intptr_t ___0__unity_self, float ___1_value, const RuntimeMethod* method) 
 {
 	typedef void (*WheelCollider_set_brakeTorque_Injected_mF745FF43BCCE204923ABCF9FD3F0725BFB6927E2_ftn) (intptr_t, float);
@@ -310,7 +310,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_set_brakeTorque_Injected_m
 	_il2cpp_icall_func = (WheelCollider_set_brakeTorque_Injected_mF745FF43BCCE204923ABCF9FD3F0725BFB6927E2_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WheelCollider::set_brakeTorque_Injected(System.IntPtr,System.Single)");
 	_il2cpp_icall_func(___0__unity_self, ___1_value);
 }
-// Method Definition Index: 149056
+// Method Definition Index: 149069
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_set_steerAngle_Injected_m1D19C28872BFFC9C692FA4F50454A3400D5ACC20 (intptr_t ___0__unity_self, float ___1_value, const RuntimeMethod* method) 
 {
 	typedef void (*WheelCollider_set_steerAngle_Injected_m1D19C28872BFFC9C692FA4F50454A3400D5ACC20_ftn) (intptr_t, float);
@@ -319,7 +319,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_set_steerAngle_Injected_m1
 	_il2cpp_icall_func = (WheelCollider_set_steerAngle_Injected_m1D19C28872BFFC9C692FA4F50454A3400D5ACC20_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WheelCollider::set_steerAngle_Injected(System.IntPtr,System.Single)");
 	_il2cpp_icall_func(___0__unity_self, ___1_value);
 }
-// Method Definition Index: 149057
+// Method Definition Index: 149070
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_GetWorldPose_Injected_m5CADCBBA43204BA3C8EF66B85A568D7A685B28AE (intptr_t ___0__unity_self, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___1_pos, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___2_quat, const RuntimeMethod* method) 
 {
 	typedef void (*WheelCollider_GetWorldPose_Injected_m5CADCBBA43204BA3C8EF66B85A568D7A685B28AE_ftn) (intptr_t, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974*);

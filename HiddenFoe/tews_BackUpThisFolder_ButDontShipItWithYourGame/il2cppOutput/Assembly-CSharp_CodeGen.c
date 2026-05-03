@@ -22,6 +22,18 @@ extern void U3CFreezePlayerU3Ed__14_System_Collections_IEnumerator_get_Current_m
 extern void KnifeTrail_Start_m2A2DD7B4A677D1E1EDCA8D62363CFA0C30BB3B97 (void);
 extern void KnifeTrail_Update_mA1ECFB9CD144388C826346329788D7CC225F5046 (void);
 extern void KnifeTrail__ctor_mC0FD8E32B4D05263E6BC1E003180287F2F386BB8 (void);
+extern void PokeToOrigin_Start_mA8BD8105FE1AD6023B9845097B79CB920F0C07AD (void);
+extern void PokeToOrigin_OnDestroy_mF9A884C3A72D2E3EA1885E23637D50C4D721B6C3 (void);
+extern void PokeToOrigin_OnPoked_mCC0F96AB86632F9FECE5ECD780AF538D182DBBFF (void);
+extern void PokeToOrigin_MoveAllPlayersToOrigin_mA5E8E17CC33A15CA51678286DC9B964C5CE5B795 (void);
+extern void PokeToOrigin_RequestMoveServerRpc_mF6F6428C41A8D6F264CA3FF37EADED352D9D2831 (void);
+extern void PokeToOrigin_TeleportAllPlayersClientRpc_mCAC2D911C49082047F0EB96F6B602830B01A659B (void);
+extern void PokeToOrigin__ctor_mE8D45373114465567AA1FE88898A2846571AB602 (void);
+extern void PokeToOrigin___initializeVariables_mBB66A38BC41287BB7FBB7177B35C6DCD173B4377 (void);
+extern void PokeToOrigin___initializeRpcs_mC048E1630CDDFAFB55AB6E6E19868D099B1113DD (void);
+extern void PokeToOrigin___rpc_handler_1607443551_mF8299751FFFCB22CD081B38E6B077A4064371821 (void);
+extern void PokeToOrigin___rpc_handler_3270923664_m9108701779FF5B7B01BC3F7DCF1A23A23966EC91 (void);
+extern void PokeToOrigin___getTypeName_m26C83C5CD12AE035BF7ABCF08A6761CD28908D58 (void);
 extern void SimpleShoot_Start_m49FBE100F02C578F2B3790D8F8C70B6D186C4EAE (void);
 extern void SimpleShoot_Update_m9398FE8946B099F32DC83B8F743B14921950B604 (void);
 extern void SimpleShoot_Shoot_mF9DB22811DA76E629BEA1677FAA3A7B879196214 (void);
@@ -541,7 +553,8 @@ extern void InventoryStartingItems_Start_mED92C2A61EFED559C5C4E902C51C0163CD7D38
 extern void InventoryStartingItems_SetupInSlot_m8B24D84475BB77F3C38308C4FC5D5A9768A34E1E (void);
 extern void InventoryStartingItems__ctor_mB204B9F59698B9A159465CA15B0D2900C8962529 (void);
 extern void SlotStartingItem__ctor_mD92346FA77DACDC16BBE02E933932B046006738E (void);
-static Il2CppMethodPointer s_methodPointers[534] = 
+extern void NetworkVariableSerializationHelper_InitializeSerialization_mA4F17C9D8F4934C552263003358AF8CC0E55E6E3 (void);
+static Il2CppMethodPointer s_methodPointers[547] = 
 {
 	GumSquish_Start_m9668BCCFCC3078139EB321E3A84063B850E02456,
 	GumSquish_OnTriggerEnter_m85203E633E311F30523623E8348F127100C4337B,
@@ -558,6 +571,18 @@ static Il2CppMethodPointer s_methodPointers[534] =
 	KnifeTrail_Start_m2A2DD7B4A677D1E1EDCA8D62363CFA0C30BB3B97,
 	KnifeTrail_Update_mA1ECFB9CD144388C826346329788D7CC225F5046,
 	KnifeTrail__ctor_mC0FD8E32B4D05263E6BC1E003180287F2F386BB8,
+	PokeToOrigin_Start_mA8BD8105FE1AD6023B9845097B79CB920F0C07AD,
+	PokeToOrigin_OnDestroy_mF9A884C3A72D2E3EA1885E23637D50C4D721B6C3,
+	PokeToOrigin_OnPoked_mCC0F96AB86632F9FECE5ECD780AF538D182DBBFF,
+	PokeToOrigin_MoveAllPlayersToOrigin_mA5E8E17CC33A15CA51678286DC9B964C5CE5B795,
+	PokeToOrigin_RequestMoveServerRpc_mF6F6428C41A8D6F264CA3FF37EADED352D9D2831,
+	PokeToOrigin_TeleportAllPlayersClientRpc_mCAC2D911C49082047F0EB96F6B602830B01A659B,
+	PokeToOrigin__ctor_mE8D45373114465567AA1FE88898A2846571AB602,
+	PokeToOrigin___initializeVariables_mBB66A38BC41287BB7FBB7177B35C6DCD173B4377,
+	PokeToOrigin___initializeRpcs_mC048E1630CDDFAFB55AB6E6E19868D099B1113DD,
+	PokeToOrigin___rpc_handler_1607443551_mF8299751FFFCB22CD081B38E6B077A4064371821,
+	PokeToOrigin___rpc_handler_3270923664_m9108701779FF5B7B01BC3F7DCF1A23A23966EC91,
+	PokeToOrigin___getTypeName_m26C83C5CD12AE035BF7ABCF08A6761CD28908D58,
 	SimpleShoot_Start_m49FBE100F02C578F2B3790D8F8C70B6D186C4EAE,
 	SimpleShoot_Update_m9398FE8946B099F32DC83B8F743B14921950B604,
 	SimpleShoot_Shoot_mF9DB22811DA76E629BEA1677FAA3A7B879196214,
@@ -1077,8 +1102,9 @@ static Il2CppMethodPointer s_methodPointers[534] =
 	InventoryStartingItems_SetupInSlot_m8B24D84475BB77F3C38308C4FC5D5A9768A34E1E,
 	InventoryStartingItems__ctor_mB204B9F59698B9A159465CA15B0D2900C8962529,
 	SlotStartingItem__ctor_mD92346FA77DACDC16BBE02E933932B046006738E,
+	NetworkVariableSerializationHelper_InitializeSerialization_mA4F17C9D8F4934C552263003358AF8CC0E55E6E3,
 };
-static const int32_t s_InvokerIndices[534] = 
+static const int32_t s_InvokerIndices[547] = 
 {
 	25311,
 	19244,
@@ -1095,6 +1121,18 @@ static const int32_t s_InvokerIndices[534] =
 	25311,
 	25311,
 	25311,
+	25311,
+	25311,
+	19244,
+	25311,
+	25311,
+	25311,
+	25311,
+	25311,
+	25311,
+	32141,
+	32141,
+	25046,
 	25311,
 	25311,
 	25311,
@@ -1614,12 +1652,13 @@ static const int32_t s_InvokerIndices[534] =
 	10086,
 	25311,
 	25311,
+	41099,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	534,
+	547,
 	s_methodPointers,
 	0,
 	NULL,
