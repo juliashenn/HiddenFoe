@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 3782714317544501112}
   - component: {fileID: 1011442051348171416}
   - component: {fileID: 7275497178681979649}
+  - component: {fileID: 6433956099433249107}
   m_Layer: 0
   m_Name: '[BuildingBlock] Trap Final_)'
   m_TagString: Untagged
@@ -313,7 +314,7 @@ MonoBehaviour:
   _maxGrabPoints: -1
   _rigidbody: {fileID: 4819165972006138703}
   _kinematicWhileSelected: 1
-  _throwWhenUnselected: 1
+  _throwWhenUnselected: 0
   _forceKinematicDisabled: 0
 --- !u!114 &6796014150320505682
 MonoBehaviour:
@@ -340,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3665854527
+  GlobalObjectIdHash: 739801060
   InScenePlacedSourceGlobalObjectIdHash: 1980464393
   DeferredDespawnTick: 0
   Ownership: 1
@@ -674,6 +675,19 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &6433956099433249107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830952639588163523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e5e53855f37504e97a12689f477968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  weaponType: 2
 --- !u!1 &8215228000544436593
 GameObject:
   m_ObjectHideFlags: 0

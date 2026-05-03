@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1477694310876481549, guid: 6ee0dc7c1f1c3a64ca59a3856744bde4, type: 3}
       propertyPath: m_FillAmount
-      value: 0.374
+      value: 0.472
       objectReference: {fileID: 0}
     - target: {fileID: 2032775206784202789, guid: 6ee0dc7c1f1c3a64ca59a3856744bde4, type: 3}
       propertyPath: m_Layer
@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3998901780648002700, guid: 6ee0dc7c1f1c3a64ca59a3856744bde4, type: 3}
       propertyPath: m_Value
-      value: 0.374
+      value: 0.472
       objectReference: {fileID: 0}
     - target: {fileID: 4343482528630365863, guid: 6ee0dc7c1f1c3a64ca59a3856744bde4, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -1019,6 +1019,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3882252015639250271 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3998901780648002700, guid: 6ee0dc7c1f1c3a64ca59a3856744bde4, type: 3}
+  m_PrefabInstance: {fileID: 188716159452529107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!1001 &1319330075359357537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1444,13 +1455,14 @@ MonoBehaviour:
   suspicionTickAudio: {fileID: 950271632083744942}
   suspiciousAnimName: idle_m_2_220f
   viewRadius: 3
-  viewAngle: 90
+  viewAngle: 130
   targetMask:
     serializedVersion: 2
     m_Bits: 64
   obstructionMask:
     serializedVersion: 2
     m_Bits: 0
+  suspicionSlider: {fileID: 3882252015639250271}
   bleedParticles: {fileID: 68640436439209962}
   bleedingSound: {fileID: 3429527291463979092}
   deathSound: {fileID: 3429527291463979092}

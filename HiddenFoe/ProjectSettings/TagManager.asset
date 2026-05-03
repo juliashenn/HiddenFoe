@@ -30,6 +30,7 @@ TagManager:
   - QDSUITextInputField
   - QDSUIToggleCheckboxRadio
   - LethalObject
+  - projectile
   layers:
   - Default
   - TransparentFX
@@ -40,7 +41,7 @@ TagManager:
   - Weapon
   - People
   - Prop
-  - 
+  - Players
   - 
   - 
   - 

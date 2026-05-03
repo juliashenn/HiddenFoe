@@ -2,15 +2,31 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public Canvas endScreen;
+
     void Start()
+    {
+        if (endScreen != null) 
+        {
+            endScreen.SetActive(false);
+        }
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("LethalObject"))
+        {
+            // LevelManager.EndGame();
+            if (endScreen != null) 
+            {
+                endScreen.SetActive(true);
+            }
+        }
     }
 }

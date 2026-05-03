@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4546726288952452534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: M1911 Magazine_Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6089484274756146289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Magazine_Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4354175183398948841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: M1911 Handgun_Black (Shooting)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3289919704972906947}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.19521299, y: -0, z: -0, w: 0.9807609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.091776714, y: -0.24875098, z: 0.13443643}
   m_LocalScale: {x: 9.17768, y: 9.757376, z: 8.735734}
   m_ConstrainProportionsScale: 0
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4420824124597828971}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Barrel_Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,8 @@ GameObject:
   - component: {fileID: 5807936267624105501}
   - component: {fileID: 7485793788050412876}
   - component: {fileID: -6648712688865302615}
-  m_Layer: 0
+  - component: {fileID: 1786917037356738993}
+  m_Layer: 6
   m_Name: '[BuildingBlock] Black Gun Final!!!_)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4553273414938580946}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19521299, y: -0, z: -0, w: 0.9807609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.9944704, y: 0.566, z: 11.414}
   m_LocalScale: {x: 0.108959995, y: 0.1, z: 0.11695892}
   m_ConstrainProportionsScale: 0
@@ -173,7 +174,7 @@ Transform:
   - {fileID: 4816186510670876030}
   - {fileID: 4354175183398948841}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 22.514, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2201739226815162477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: ae1106cc-95f9-41b3-88bc-174743d76ff0
+  instanceId: e5a0fd96-9206-4a93-aed5-b4a41798df14
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: d5c83ff6-47e4-4c98-acdd-041d4686912f
@@ -272,8 +273,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.2604421, y: 1.4509451, z: 1.897925}
+  m_Center: {x: -0.089412436, y: 0.22547245, z: 0.86066365}
 --- !u!54 &5034720232178307626
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -322,7 +323,7 @@ MonoBehaviour:
   _maxGrabPoints: -1
   _rigidbody: {fileID: 5034720232178307626}
   _kinematicWhileSelected: 1
-  _throwWhenUnselected: 1
+  _throwWhenUnselected: 0
   _forceKinematicDisabled: 0
 --- !u!114 &7460751932391784451
 MonoBehaviour:
@@ -445,7 +446,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4553273414938580946}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -567,6 +568,19 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &1786917037356738993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553273414938580946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e5e53855f37504e97a12689f477968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  weaponType: 1
 --- !u!1 &6539592520839671001
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +592,7 @@ GameObject:
   - component: {fileID: 2305823723715541659}
   - component: {fileID: 7984808777723363747}
   - component: {fileID: 5472875080629328484}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +682,7 @@ GameObject:
   - component: {fileID: 5388992842103240081}
   - component: {fileID: 506750172138920684}
   - component: {fileID: 5087348589839368937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CasingExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +775,7 @@ GameObject:
   - component: {fileID: 1346292430302607891}
   - component: {fileID: 2335197508756291254}
   - component: {fileID: 4261577487655281043}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: M1911 Handgun_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1000,7 +1014,7 @@ GameObject:
   - component: {fileID: 1130616382368884745}
   - component: {fileID: 233341583777031886}
   - component: {fileID: 3273835419910676412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1104,7 @@ GameObject:
   - component: {fileID: 5271631740278103109}
   - component: {fileID: 6339404260542752404}
   - component: {fileID: 5788195970834084522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1182,7 +1196,7 @@ GameObject:
   - component: {fileID: 4440137512079943398}
   - component: {fileID: 3389393810877859860}
   - component: {fileID: 6652751160666968788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: '[BuildingBlock] HandGrabInstallationRoutine'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1217,7 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 205b3f26-9dc6-48cc-9b56-899349e6c0d2
+  instanceId: 207d79ce-4973-4b3d-bf9b-c53539937413
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -1299,7 +1313,7 @@ GameObject:
   - component: {fileID: 7208976152768997887}
   - component: {fileID: 1532846277843431042}
   - component: {fileID: 4718579845426158495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: M1911 Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1387,7 +1401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1367465584197937827}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ejection_Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
