@@ -30887,6 +30887,8 @@ struct PointerHandler_tADCE6189E3576A83D2398A5B07062A7180A9FDF7  : public UIBeha
 struct PokeToOrigin_t62D037D0D3ABFD89E667F82DF1FCB272CDF7D76A  : public NetworkBehaviour_t1F9CC6E5B76D29ECECBB61F02D8E8EDE24CDDDCE
 {
 	PokeInteractable_tF277648D34B289EA77CC7387E293077C6507B556* ____pokeInteractable;
+	TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24* ____spawnPoints;
+	int32_t ____nextSpawnIndex;
 };
 struct PoolManagerSingleton_t309A897DB89BFB9F8E7F00B9EC6E8D218A71578B  : public SingletonMonoBehaviour_1_tEBFCB1915A36248F4D76614D336DCF1A2F7F9CF7
 {
@@ -40711,9 +40713,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable17881[10] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable17882[12] = 
 {
 	static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___parentGrabbable)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___trailPoint)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___trailRenderer)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___trailTime)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___startWidth)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___endWidth)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___trailColor)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___holdingController)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___trailButton)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___slashSound)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___slashVolume)),static_cast<int32_t>(offsetof(KnifeTrail_t9362B708DED2BF74907150255F8DC4CD6C3D93D2, ___audioSource)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable17883[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable17883[3] = 
 {
-	static_cast<int32_t>(offsetof(PokeToOrigin_t62D037D0D3ABFD89E667F82DF1FCB272CDF7D76A, ____pokeInteractable)),};
+	static_cast<int32_t>(offsetof(PokeToOrigin_t62D037D0D3ABFD89E667F82DF1FCB272CDF7D76A, ____pokeInteractable)),static_cast<int32_t>(offsetof(PokeToOrigin_t62D037D0D3ABFD89E667F82DF1FCB272CDF7D76A, ____spawnPoints)),static_cast<int32_t>(offsetof(PokeToOrigin_t62D037D0D3ABFD89E667F82DF1FCB272CDF7D76A, ____nextSpawnIndex)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable17884[15] = 
 {
 	static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___bulletPrefab)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___casingPrefab)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___muzzleFlashPrefab)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___gunAnimator)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___barrelLocation)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___casingExitLocation)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___destroyTimer)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___shotPower)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___ejectPower)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___shootingController)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___fireButton)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___parentGrabbable)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___shootSound)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___shootVolume)),static_cast<int32_t>(offsetof(SimpleShoot_tA677591C78019DB63F51DD7B4009D8CDDB549A90, ___audioSource)),};
