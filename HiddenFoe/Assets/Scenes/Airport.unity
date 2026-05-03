@@ -95779,7 +95779,7 @@ MonoBehaviour:
   _maxGrabPoints: -1
   _rigidbody: {fileID: 1169919403}
   _kinematicWhileSelected: 1
-  _throwWhenUnselected: 0
+  _throwWhenUnselected: 1
   _forceKinematicDisabled: 0
 --- !u!54 &1169919403
 Rigidbody:
