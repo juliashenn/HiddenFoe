@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
+<<<<<<< Updated upstream
+=======
+    path: Assets/Scenes/Temple.unity
+    guid: d69561ebb0f979e4abd011e9b3e07945
+  - enabled: 1
+>>>>>>> Stashed changes
     path: Assets/Scenes/Airport.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
     path: Assets/Samples/Meta XR Movement SDK/201.0.0/Advanced Samples/Scenes/MovementISDKLocomotion.unity
     guid: f218e4b84bfc26549a67cf06a00d10cd
-  - enabled: 0
-    path: Assets/Scenes/Temple.unity
-    guid: d69561ebb0f979e4abd011e9b3e07945
   - enabled: 0
     path: Assets/Scenes/City.unity
     guid: 163ef5c1d3cfecf498ab32f87e70aad3
