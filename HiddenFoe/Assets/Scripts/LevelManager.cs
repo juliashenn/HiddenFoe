@@ -12,9 +12,6 @@ public class LevelManager : NetworkBehaviour
     [Header("Round Settings")]
     public float roundStartTime = 180f;
 
-    [Header("Spawn Points")]
-    [SerializeField] private Transform[] _spawnPoints;
-
     private NetworkVariable<float> timeRemaining = new NetworkVariable<float>();
     private NetworkVariable<bool> timeRunning = new NetworkVariable<bool>(false);
     private NetworkVariable<bool> gameEnded = new NetworkVariable<bool>(false);
@@ -27,7 +24,7 @@ public class LevelManager : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        Debug.Log($"[LevelManager] OnNetworkSpawn — IsServer={IsServer}, IsSpawned={IsSpawned}");
+        Debug.Log($"[LevelManager] OnNetworkSpawn — IsServer={IsServer}");
         if (IsServer) StartRound();
     }
 
@@ -60,45 +57,49 @@ public class LevelManager : NetworkBehaviour
     void DisplayTime(float timeToDisplay)
     {
         if (Timer == null) return;
+        timeToDisplay += 1;
         Timer.text = $"{Mathf.FloorToInt(timeToDisplay / 60):00}:{Mathf.FloorToInt(timeToDisplay % 60):00}";
     }
 
+    // Called when a player walks into a lethal cube/object.
+    // OnTriggerEnter fired on the VICTIM's machine, they already showed lose locally.
+    // Just tell everyone else they won.
     [ServerRpc(RequireOwnership = false)]
     public void ReportDeathServerRpc()
     {
-        Debug.Log($"[LevelManager][SERVER] ReportDeathServerRpc received. gameEnded={gameEnded.Value}");
+        Debug.Log($"[LevelManager][SERVER] ReportDeathServerRpc. gameEnded={gameEnded.Value}");
         if (gameEnded.Value) return;
         gameEnded.Value = true;
         timeRunning.Value = false;
-        TeleportDeadPlayerClientRpc();
-        NotifyOthersWonClientRpc();
+        ShowResultClientRpc(false); // survivors win, victim already has lose screen
     }
 
-    [ClientRpc]
-    private void TeleportDeadPlayerClientRpc()
+    // Called by BulletHitDetector.
+    // shooterClientId = the client who fired the bullet = they WIN.
+    // Everyone else = they LOSE.
+    [ServerRpc(RequireOwnership = false)]
+    public void ReportBulletHitServerRpc(ulong shooterClientId)
     {
-        Player[] players = FindObjectsByType<Player>(FindObjectsSortMode.None);
-        foreach (var p in players)
+        Debug.Log($"[LevelManager][SERVER] ReportBulletHitServerRpc. shooterClientId={shooterClientId}, gameEnded={gameEnded.Value}");
+        if (gameEnded.Value) return;
+        gameEnded.Value = true;
+        timeRunning.Value = false;
+
+        // Send targeted ClientRpcs — shooter gets WIN, everyone else gets LOSE
+        foreach (var clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
-            if (!p.IsLocalPlayer || !p.IsDead) continue;
+            bool didLose = clientId != shooterClientId;
+            Debug.Log($"[LevelManager][SERVER] Sending result to clientId={clientId}, didLose={didLose}");
 
-            if (_spawnPoints == null || _spawnPoints.Length == 0)
+            var clientRpcParams = new ClientRpcParams
             {
-                Debug.LogWarning("[LevelManager] No spawn points assigned!");
-                return;
-            }
+                Send = new ClientRpcSendParams
+                {
+                    TargetClientIds = new ulong[] { clientId }
+                }
+            };
 
-            Vector3 destination = _spawnPoints[0].position;
-
-            GameObject cameraRig = GameObject.Find("[BuildingBlock] Camera Rig");
-            if (cameraRig != null)
-                cameraRig.transform.position = destination;
-            else
-                Debug.LogWarning("[LevelManager] Camera Rig not found!");
-
-            p.transform.position = destination;
-            Debug.Log($"[LevelManager] Dead local player teleported to {destination}");
-            return;
+            ShowResultClientRpc(didLose, clientRpcParams);
         }
     }
 
@@ -106,52 +107,30 @@ public class LevelManager : NetworkBehaviour
     {
         if (gameEnded.Value) return;
         gameEnded.Value = true;
-        NotifyTimeOutClientRpc();
+        ShowResultClientRpc(true); // everyone loses on timeout
     }
 
     [ClientRpc]
-    void NotifyTimeOutClientRpc()
+    void ShowResultClientRpc(bool didLose, ClientRpcParams clientRpcParams = default)
     {
-        Debug.Log("[LevelManager][CLIENT] Timeout — showing result for local player.");
-        ShowResultForLocalPlayer(true);
-    }
+        Debug.Log($"[LevelManager][CLIENT] ShowResultClientRpc — didLose={didLose}");
 
-    [ClientRpc]
-    void NotifyOthersWonClientRpc()
-    {
-        Debug.Log("[LevelManager][CLIENT] NotifyOthersWonClientRpc received.");
-
-        Player[] players = FindObjectsByType<Player>(FindObjectsSortMode.None);
-        Debug.Log($"[LevelManager][CLIENT] Found {players.Length} Player(s)");
-
-        foreach (var p in players)
+        Player localPlayer = PlayerCollision.LocalInstance?.GetPlayer();
+        if (localPlayer == null)
         {
-            Debug.Log($"[LevelManager][CLIENT] Player '{p.gameObject.name}' IsLocalPlayer={p.IsLocalPlayer} IsDead={p.IsDead}");
-        }
-
-        ShowResultForLocalPlayer(false);
-    }
-
-    private void ShowResultForLocalPlayer(bool didLose)
-    {
-        Player[] players = FindObjectsByType<Player>(FindObjectsSortMode.None);
-
-        foreach (var p in players)
-        {
-            if (!p.IsLocalPlayer) continue;
-
-            if (p.IsDead)
-            {
-                Debug.Log("[LevelManager] Local player is already dead, not overwriting with win.");
-                return;
-            }
-
-            Debug.Log($"[LevelManager] Showing result didLose={didLose} for local player '{p.gameObject.name}'");
-            p.ShowResult(didLose);
+            Debug.LogError("[LevelManager][CLIENT] LocalInstance is NULL!");
             return;
         }
 
-        Debug.LogWarning("[LevelManager] No local player found (IsLocalPlayer=true). " +
-                         "Make sure PlayerCollisionDetector is on the player prefab.");
+        // Skip if already showing lose (walked into cube case)
+        if (localPlayer.IsDead)
+        {
+            Debug.Log("[LevelManager][CLIENT] Already dead, skipping.");
+            return;
+        }
+
+        localPlayer.ShowResult(didLose);
     }
 }
+
+

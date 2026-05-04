@@ -152,8 +152,9 @@ GameObject:
   - component: {fileID: 5857230343297693156}
   - component: {fileID: 7357368435403666656}
   - component: {fileID: 7309235310191709078}
+  - component: {fileID: 2085792010462477303}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: WinCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,7 +227,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7357368435403666656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +264,31 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &2085792010462477303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4505664979332258380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
+  GlobalObjectIdHash: 968498866
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
 --- !u!1 &6697156586501597402
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6114608251021283741
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1089,7 +1115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5980824405289645110, guid: 4242ae543e145ca4ea0de387064c4fa4, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 2908956357
+      value: 1571097368
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1111,7 +1137,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 672842359259991040, guid: fb6660dddc37f2c4eb9170b13c28fb3b, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 1171783695
+      value: 2039813916
       objectReference: {fileID: 0}
     - target: {fileID: 1630920477425892223, guid: fb6660dddc37f2c4eb9170b13c28fb3b, type: 3}
       propertyPath: instanceId

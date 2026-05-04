@@ -89,6 +89,8 @@ public class SimpleShoot : MonoBehaviour
         if (!bulletPrefab) return;
 
         GameObject bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
+        BulletHitDetector detector = bullet.GetComponent<BulletHitDetector>();
+        if (detector != null) detector.firedByLocalPlayer = true;
         bullet.GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
     }
 

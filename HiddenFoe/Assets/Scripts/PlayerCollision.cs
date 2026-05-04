@@ -2,51 +2,70 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+    public static PlayerCollision LocalInstance { get; private set; }
+
     private Player _player;
 
     private void Awake()
     {
-        // Check this GameObject first, then walk up the hierarchy
         _player = GetComponent<Player>();
-        Debug.Log($"[PlayerCollisionDetector] Awake on '{gameObject.name}', " + $"Player found = {_player != null}");
         if (_player == null)
             _player = GetComponentInParent<Player>();
 
         if (_player == null)
-            Debug.LogError($"[PlayerCollisionDetector] on '{gameObject.name}': " +
-                           "No Player found on this object or any parent!");
-        else
-            Debug.Log($"[PlayerCollisionDetector] on '{gameObject.name}': " +
-                      $"Found Player on '{_player.gameObject.name}'");
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log($"[PlayerCollisionDetector] OnTriggerEnter on '{gameObject.name}' — tag='{other.tag}'");
-
-        if (!other.CompareTag("LethalObject")) return;
-
-        if (_player == null)
         {
-            Debug.LogError("[PlayerCollisionDetector] _player is null, cannot show result!");
+            Debug.LogError($"[PlayerCollisionDetector] on '{gameObject.name}': No Player found!");
             return;
         }
 
-        Debug.Log($"[PlayerCollisionDetector] Hit LethalObject — calling ShowResult(true) " +
-                  $"on Player '{_player.gameObject.name}'");
+        Debug.Log($"[PlayerCollisionDetector] Awake on '{gameObject.name}'");
+
+        // Check if Camera.main is a child of this player prefab.
+        // The local player's prefab contains the VR camera; remote players don't.
+        if (Camera.main != null && IsChildOf(Camera.main.transform, _player.transform))
+        {
+            LocalInstance = this;
+            Debug.Log($"[PlayerCollisionDetector] LocalInstance set via camera check: '{gameObject.name}'");
+        }
+        else
+        {
+            Debug.Log($"[PlayerCollisionDetector] '{gameObject.name}' is NOT the local player (no camera found as child)");
+        }
+    }
+
+    private bool IsChildOf(Transform child, Transform parent)
+    {
+        Transform t = child;
+        while (t != null)
+        {
+            if (t == parent) return true;
+            t = t.parent;
+        }
+        return false;
+    }
+
+    private void OnDestroy()
+    {
+        if (LocalInstance == this) LocalInstance = null;
+    }
+
+    public Player GetPlayer() => _player;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("LethalObject")) return;
+
+        Debug.Log($"[PlayerCollisionDetector] Hit LethalObject on '{_player.gameObject.name}'");
+
+        // Also set LocalInstance here as fallback in case camera check failed
+        LocalInstance = this;
 
         _player.IsDead = true;
         _player.ShowResult(true);
 
-        if (LevelManager.Instance == null)
-        {
-            Debug.LogError("[PlayerCollisionDetector] LevelManager.Instance is NULL!");
-            return;
-        }
-
+        if (LevelManager.Instance == null) { Debug.LogError("[PlayerCollisionDetector] LevelManager is NULL!"); return; }
         LevelManager.Instance.ReportDeathServerRpc();
     }
-
-
-
 }
+
+

@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 1079049783570863017}
   - component: {fileID: 7990232828670004246}
   - component: {fileID: 7623124839789347932}
+  - component: {fileID: 8609339302251899664}
   m_Layer: 6
   m_Name: '[BuildingBlock] Knife Final!!!_)'
   m_TagString: LethalObject
@@ -336,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: b7b783fe-3800-4cf9-9dd9-700a39ea0d73
+  instanceId: 3b9c5577-4217-450a-8e11-def3d7fdfeae
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: d5c83ff6-47e4-4c98-acdd-041d4686912f
@@ -470,7 +471,7 @@ MonoBehaviour:
   _targetTransform: {fileID: 7064162435227070165}
   _maxGrabPoints: -1
   _rigidbody: {fileID: 9146923892497275123}
-  _kinematicWhileSelected: 1
+  _kinematicWhileSelected: 0
   _throwWhenUnselected: 0
   _forceKinematicDisabled: 0
 --- !u!114 &7856129312966659183
@@ -541,9 +542,9 @@ MonoBehaviour:
   SyncPositionX: 1
   SyncPositionY: 1
   SyncPositionZ: 1
-  SyncRotAngleX: 0
-  SyncRotAngleY: 0
-  SyncRotAngleZ: 0
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
   SyncScaleX: 0
   SyncScaleY: 0
   SyncScaleZ: 0
@@ -584,7 +585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.Components.NetworkRigidbody
   ShowTopMostFoldoutHeaderGroup: 1
   NetworkRigidbodyBaseExpanded: 0
-  UseRigidBodyForMotion: 0
+  UseRigidBodyForMotion: 1
   AutoUpdateKinematicState: 1
   AutoSetKinematicOnDespawn: 1
 --- !u!114 &7990232828670004246
@@ -729,6 +730,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
   weaponType: 0
+--- !u!114 &8609339302251899664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5286574142449445115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4abba025ab4df42b9bf59cb3534635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletHitDetector
+  firedByLocalPlayer: 0
 --- !u!1 &8855202061090277399
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: ed223739-5e1e-443e-8171-56d17aa05efe
+  instanceId: 04d8433a-e165-4a7d-ae7a-ad7e032827d2
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
