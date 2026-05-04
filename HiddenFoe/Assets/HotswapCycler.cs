@@ -20,17 +20,18 @@ namespace MikeNspired.XRIStarterKit
         public GameObject[] itemPrefabs;
 
         [Header("Sound Settings")]
-        [Tooltip("Sound when cycling between slots")]
         [SerializeField] private AudioClip cycleSound;
-        [Tooltip("Sound when equipping an item")]
         [SerializeField] private AudioClip equipSound;
         [SerializeField] [Range(0f, 1f)] private float cycleVolume = 1f;
         [SerializeField] [Range(0f, 1f)] private float equipVolume = 1f;
         private AudioSource audioSource;
 
+        // Pre-spawned instances of each item stored off-screen
+        private GameObject[] spawnedItems;
+        private static readonly Vector3 hiddenPosition = new Vector3(0, -1000, 0);
+
         private int selectedIndex = 0;
         private float lastCycleTime = -999f;
-        private GameObject currentEquippedItem;
 
         private void Awake()
         {
@@ -45,6 +46,18 @@ namespace MikeNspired.XRIStarterKit
             audioSource.spatialBlend = 0f;
         }
 
+        private void Start()
+        {
+            // Pre-spawn all items hidden off screen
+            spawnedItems = new GameObject[itemPrefabs.Length];
+            for (int i = 0; i < itemPrefabs.Length; i++)
+            {
+                if (itemPrefabs[i] == null) continue;
+                spawnedItems[i] = Instantiate(itemPrefabs[i], hiddenPosition, Quaternion.identity);
+                HideItem(spawnedItems[i]);
+            }
+        }
+
         private void OnEnable()
         {
             StartCoroutine(HighlightCurrentSlotNextFrame());
@@ -54,7 +67,6 @@ namespace MikeNspired.XRIStarterKit
         {
             if (!inventoryManager.IsActive) return;
 
-            // B button on right hand to cycle
             if (OVRInput.GetDown(OVRInput.Button.Two, OVRInput.Controller.RTouch))
             {
                 if (Time.time - lastCycleTime > cycleCooldown)
@@ -64,7 +76,6 @@ namespace MikeNspired.XRIStarterKit
                 }
             }
 
-            // Right trigger to equip and close inventory
             if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
                 EquipAndClose();
         }
@@ -78,7 +89,6 @@ namespace MikeNspired.XRIStarterKit
             selectedIndex = (selectedIndex + direction + slots.Length) % slots.Length;
             slots[selectedIndex]?.BeginControllerHover();
 
-            // Play cycle sound
             if (cycleSound != null)
                 audioSource.PlayOneShot(cycleSound, cycleVolume);
 
@@ -87,31 +97,52 @@ namespace MikeNspired.XRIStarterKit
 
         private void EquipAndClose()
         {
-            if (selectedIndex >= itemPrefabs.Length || itemPrefabs[selectedIndex] == null)
+            if (selectedIndex >= spawnedItems.Length || spawnedItems[selectedIndex] == null)
             {
-                Debug.LogWarning("No prefab assigned for slot " + selectedIndex);
+                Debug.LogWarning("No item for slot " + selectedIndex);
                 return;
             }
 
-            // Destroy previous equipped item if any
-            if (currentEquippedItem != null)
-                Destroy(currentEquippedItem);
+            // Hide all items first
+            foreach (var item in spawnedItems)
+                if (item != null) HideItem(item);
 
-            // Spawn the item at the right hand position
-            currentEquippedItem = Instantiate(
-                itemPrefabs[selectedIndex],
-                rightHandEquipPoint.position,
-                rightHandEquipPoint.rotation
-            );
+            // Show selected item in front of player
+            GameObject selected = spawnedItems[selectedIndex];
+            ShowItem(selected);
 
-            // Play equip sound
             if (equipSound != null)
                 audioSource.PlayOneShot(equipSound, equipVolume);
 
-            Debug.Log("Spawned: " + itemPrefabs[selectedIndex].name);
-
-            // Close the inventory
             StartCoroutine(CloseInventoryNextFrame());
+        }
+
+        private void HideItem(GameObject item)
+        {
+            item.transform.position = hiddenPosition;
+
+            // Freeze rigidbodies while hidden
+            foreach (Rigidbody rb in item.GetComponentsInChildren<Rigidbody>())
+            {
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true;
+            }
+        }
+
+        private void ShowItem(GameObject item)
+        {
+            // Place in front of player at waist height
+            Vector3 spawnPos = Camera.main.transform.position
+                             + Camera.main.transform.forward * 0.6f
+                             - Vector3.up * 0.3f;
+
+            item.transform.position = spawnPos;
+            item.transform.rotation = Quaternion.identity;
+
+            // Unfreeze so Meta XR can grab it
+            foreach (Rigidbody rb in item.GetComponentsInChildren<Rigidbody>())
+                rb.isKinematic = false;
         }
 
         private IEnumerator CloseInventoryNextFrame()
