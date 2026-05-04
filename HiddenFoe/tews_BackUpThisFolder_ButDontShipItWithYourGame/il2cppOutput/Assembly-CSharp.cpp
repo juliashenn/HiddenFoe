@@ -531,6 +531,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral06A3A357F4413F0528771B6F30BBACE1569A644A
 IL2CPP_EXTERN_C String_t* _stringLiteral0A19D9F6E28A5725DF476625E5F21BCB64AB355E;
 IL2CPP_EXTERN_C String_t* _stringLiteral0A5B75A180F8485D63D34FF1F4EDF6699CD0E2E0;
 IL2CPP_EXTERN_C String_t* _stringLiteral0B899209DB2666B32AB91F96194E43FCE86EF9F9;
+IL2CPP_EXTERN_C String_t* _stringLiteral0E40BFBDB61E07324E3199C40323B4328759C8B3;
 IL2CPP_EXTERN_C String_t* _stringLiteral0E4D15C68D8DC451B73EE097353E5D204805F559;
 IL2CPP_EXTERN_C String_t* _stringLiteral0EF911B4E5C5A3E63DAB6CEA449EF637C363EF9B;
 IL2CPP_EXTERN_C String_t* _stringLiteral0F9845C5028D7C38C3DAEA054F6A3202010E88E1;
@@ -14282,10 +14283,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* LevelManager___getTypeName_m1956CBD
 // Method Definition Index: 136586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NPCSpawner_Start_mB1058E51D117419CAA4205C625C82C0E5FAAFA01 (NPCSpawner_tBF7B13D91353957F9EEA02F1F42547EAB327423A* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0E40BFBDB61E07324E3199C40323B4328759C8B3);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:25>
-		NPCSpawner_SpawnAllNPCs_m9DE664B34E6D99A56C8D3EBC15F628C722F68CB0(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_0 = (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(&__this->___center);
+		String_t* L_1;
+		L_1 = Vector3_ToString_m6C24B9F0382D25D75B05C606E127CD14660574EE_inline(L_0, NULL);
+		String_t* L_2;
+		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral0E40BFBDB61E07324E3199C40323B4328759C8B3, L_1, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
 		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:26>
+		NPCSpawner_SpawnAllNPCs_m9DE664B34E6D99A56C8D3EBC15F628C722F68CB0(__this, NULL);
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:27>
 		return;
 	}
 }
@@ -14293,7 +14309,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NPCSpawner_Start_mB1058E51D117419CAA4205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NPCSpawner_Update_m9BD691DC3F11099185296241C47C926BDDD48AB6 (NPCSpawner_tBF7B13D91353957F9EEA02F1F42547EAB327423A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:32>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:33>
 		return;
 	}
 }
@@ -14313,7 +14329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NPCSpawner_SpawnAllNPCs_m9DE664B34E6D99A
 	memset((&V_1), 0, sizeof(V_1));
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_2 = NULL;
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:35>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:36>
 		bool L_0 = __this->___hasSpawned;
 		if (!L_0)
 		{
@@ -14321,37 +14337,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NPCSpawner_SpawnAllNPCs_m9DE664B34E6D99A
 		}
 	}
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:35>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:36>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:36>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:37>
 		V_0 = 0;
 		goto IL_0040;
 	}
 
 IL_000d:
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:38>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:39>
 		bool L_1;
 		L_1 = NPCSpawner_TryGetValidNavMeshPoint_m1D332C13585491403973FC5CBF5C87E4AB75C873(__this, (&V_1), NULL);
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:40>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:41>
 		if (L_1)
 		{
 			goto IL_001e;
 		}
 	}
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:41>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:42>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = __this->___center;
 		V_1 = L_2;
 	}
 
 IL_001e:
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:44>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:45>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___npcPrefab;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = V_1;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_5;
@@ -14360,19 +14376,19 @@ IL_001e:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
 		L_6 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4(L_3, L_4, L_5, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var);
 		V_2 = L_6;
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:45>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:46>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_7 = __this->___spawnedNPCs;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = V_2;
 		NullCheck(L_7);
 		List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_inline(L_7, L_8, List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_RuntimeMethod_var);
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:36>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:37>
 		int32_t L_9 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_9, 1));
 	}
 
 IL_0040:
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:36>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:37>
 		int32_t L_10 = V_0;
 		int32_t L_11 = __this->___npcCount;
 		if ((((int32_t)L_10) < ((int32_t)L_11)))
@@ -14381,9 +14397,9 @@ IL_0040:
 		}
 	}
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:48>
-		__this->___hasSpawned = (bool)1;
 		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:49>
+		__this->___hasSpawned = (bool)1;
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:50>
 		return;
 	}
 }
@@ -14404,14 +14420,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NPCSpawner_TryGetValidNavMeshPoint_m1D33
 	NavMeshHit_t6323FC1F2D00E24FBFFC3E27C2F349A3BAD16F8B V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:52>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:53>
 		V_0 = 0;
 		goto IL_00bb;
 	}
 
 IL_0007:
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:53>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:54>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___center;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_1 = (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(&__this->___size);
 		float L_2 = L_1->___x;
@@ -14431,14 +14447,14 @@ IL_0007:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
 		L_12 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_0, L_11, NULL);
 		V_1 = L_12;
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:55>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:56>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
 		L_14 = Vector3_get_down_mF62B2AE7C5AC31EAC9CB62797C7190C90A7A8599_inline(NULL);
 		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_15;
 		memset((&L_15), 0, sizeof(L_15));
 		Ray__ctor_mE298992FD10A3894C38373198385F345C58BD64C_inline((&L_15), L_13, L_14, NULL);
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:57>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:58>
 		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_16 = __this->___groundMask;
 		int32_t L_17;
 		L_17 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_16, NULL);
@@ -14451,7 +14467,7 @@ IL_0007:
 		}
 	}
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:59>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:60>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
 		L_19 = RaycastHit_get_point_m02B764612562AFE0F998CC7CFB2EEDE41BA47F39((&V_2), NULL);
 		float L_20 = __this->___sampleRadius;
@@ -14463,25 +14479,25 @@ IL_0007:
 		}
 	}
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:60>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:61>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_22 = ___0_result;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23;
 		L_23 = NavMeshHit_get_position_m09E8FF6DEF5BFA3F30B3C4BCA4642442FF1BCBF1_inline((&V_3), NULL);
 		*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)L_22 = L_23;
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:61>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:62>
 		return (bool)1;
 	}
 
 IL_00b7:
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:52>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:53>
 		int32_t L_24 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_24, 1));
 	}
 
 IL_00bb:
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:52>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:53>
 		int32_t L_25 = V_0;
 		if ((((int32_t)L_25) < ((int32_t)((int32_t)30))))
 		{
@@ -14489,12 +14505,12 @@ IL_00bb:
 		}
 	}
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:65>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:66>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_26 = ___0_result;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
 		L_27 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)L_26 = L_27;
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:66>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:67>
 		return (bool)0;
 	}
 }
@@ -14512,14 +14528,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NPCSpawner_ResetRound_mF6DFC6D23625D352D
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:70>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:71>
 		V_0 = 0;
 		goto IL_002d;
 	}
 
 IL_0004:
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:71>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:72>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = __this->___spawnedNPCs;
 		int32_t L_1 = V_0;
 		NullCheck(L_0);
@@ -14534,7 +14550,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:72>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:73>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_4 = __this->___spawnedNPCs;
 		int32_t L_5 = V_0;
 		NullCheck(L_4);
@@ -14546,14 +14562,14 @@ IL_0004:
 
 IL_0029:
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:70>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:71>
 		int32_t L_7 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_7, 1));
 	}
 
 IL_002d:
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:70>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:71>
 		int32_t L_8 = V_0;
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_9 = __this->___spawnedNPCs;
 		NullCheck(L_9);
@@ -14565,13 +14581,13 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:75>
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:76>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_11 = __this->___spawnedNPCs;
 		NullCheck(L_11);
 		List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_inline(L_11, List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_RuntimeMethod_var);
-		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:76>
-		__this->___hasSpawned = (bool)0;
 		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:77>
+		__this->___hasSpawned = (bool)0;
+		//<source_info:C:/Users/mshang4.UOFI/Documents/GitHub/HiddenFoe/HiddenFoe/Assets/Scripts/NPCSpawner.cs:78>
 		return;
 	}
 }
