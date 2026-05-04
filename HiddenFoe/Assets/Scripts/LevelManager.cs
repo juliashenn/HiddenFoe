@@ -12,6 +12,9 @@ public class LevelManager : NetworkBehaviour
     [Header("Round Settings")]
     public float roundStartTime = 180f;
 
+    [Header("Spawn Points")]
+    [SerializeField] private Transform[] _spawnPoints;
+
     private NetworkVariable<float> timeRemaining = new NetworkVariable<float>();
     private NetworkVariable<bool> timeRunning = new NetworkVariable<bool>(false);
     private NetworkVariable<bool> gameEnded = new NetworkVariable<bool>(false);
@@ -67,7 +70,36 @@ public class LevelManager : NetworkBehaviour
         if (gameEnded.Value) return;
         gameEnded.Value = true;
         timeRunning.Value = false;
+        TeleportDeadPlayerClientRpc();
         NotifyOthersWonClientRpc();
+    }
+
+    [ClientRpc]
+    private void TeleportDeadPlayerClientRpc()
+    {
+        Player[] players = FindObjectsByType<Player>(FindObjectsSortMode.None);
+        foreach (var p in players)
+        {
+            if (!p.IsLocalPlayer || !p.IsDead) continue;
+
+            if (_spawnPoints == null || _spawnPoints.Length == 0)
+            {
+                Debug.LogWarning("[LevelManager] No spawn points assigned!");
+                return;
+            }
+
+            Vector3 destination = _spawnPoints[0].position;
+
+            GameObject cameraRig = GameObject.Find("[BuildingBlock] Camera Rig");
+            if (cameraRig != null)
+                cameraRig.transform.position = destination;
+            else
+                Debug.LogWarning("[LevelManager] Camera Rig not found!");
+
+            p.transform.position = destination;
+            Debug.Log($"[LevelManager] Dead local player teleported to {destination}");
+            return;
+        }
     }
 
     void OnTimeRanOut()
@@ -81,7 +113,7 @@ public class LevelManager : NetworkBehaviour
     void NotifyTimeOutClientRpc()
     {
         Debug.Log("[LevelManager][CLIENT] Timeout — showing result for local player.");
-        ShowResultForLocalPlayer(true); // change to false if everyone wins on timeout
+        ShowResultForLocalPlayer(true);
     }
 
     [ClientRpc]
@@ -108,7 +140,6 @@ public class LevelManager : NetworkBehaviour
         {
             if (!p.IsLocalPlayer) continue;
 
-            // Already showed lose locally when they were hit — don't overwrite with win
             if (p.IsDead)
             {
                 Debug.Log("[LevelManager] Local player is already dead, not overwriting with win.");
@@ -124,5 +155,3 @@ public class LevelManager : NetworkBehaviour
                          "Make sure PlayerCollisionDetector is on the player prefab.");
     }
 }
-
-

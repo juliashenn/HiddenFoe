@@ -6,12 +6,17 @@ public class PokeToOrigin : NetworkBehaviour
 {
     [SerializeField] private PokeInteractable _pokeInteractable;
     [SerializeField] private Transform[] _spawnPoints;
+    [SerializeField] private GameObject _objectToEnable;
 
     private int _nextSpawnIndex = 0;
 
     private void Start()
     {
         _pokeInteractable.WhenSelectingInteractorAdded.Action += OnPoked;
+
+        // Ensure the object starts disabled if assigned
+        if (_objectToEnable != null)
+            _objectToEnable.SetActive(false);
     }
 
     private void OnDestroy()
@@ -35,7 +40,6 @@ public class PokeToOrigin : NetworkBehaviour
             RequestSpawnServerRpc();
     }
 
-    // Only runs on server - assigns each client a different spawn point
     private void AssignSpawnPointsServerSide()
     {
         var clients = NetworkManager.Singleton.ConnectedClientsIds;
@@ -52,6 +56,9 @@ public class PokeToOrigin : NetworkBehaviour
             });
             i++;
         }
+
+        // Enable the object on all clients via RPC
+        EnableObjectClientRpc();
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -60,7 +67,6 @@ public class PokeToOrigin : NetworkBehaviour
         AssignSpawnPointsServerSide();
     }
 
-    // Sent to a specific client with their assigned position
     [ClientRpc]
     private void TeleportClientRpc(Vector3 position, ClientRpcParams clientRpcParams = default)
     {
@@ -81,6 +87,20 @@ public class PokeToOrigin : NetworkBehaviour
             NetworkObject netObj = player.GetComponent<NetworkObject>();
             if (netObj != null && netObj.IsLocalPlayer)
                 player.transform.position = position;
+        }
+    }
+
+    [ClientRpc]
+    private void EnableObjectClientRpc()
+    {
+        if (_objectToEnable != null)
+        {
+            _objectToEnable.SetActive(true);
+            Debug.Log("Object enabled: " + _objectToEnable.name);
+        }
+        else
+        {
+            Debug.LogWarning("No object assigned to enable!");
         }
     }
 }
